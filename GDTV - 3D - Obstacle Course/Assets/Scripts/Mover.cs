@@ -9,6 +9,9 @@ public class Mover : MonoBehaviour
     [SerializeField] private float zSpeed;
 
     private void Update() {
-        transform.Translate(xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, zSpeed * Time.deltaTime);
+        transform.Translate(0, 0, Input.GetAxis("Vertical") * zSpeed * Time.deltaTime);
+        transform.Translate(Input.GetAxis("Horizontal") * xSpeed * Time.deltaTime, 0, 0);
+        
+        //transform.Translate(xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, zSpeed * Time.deltaTime);
     }
 }
