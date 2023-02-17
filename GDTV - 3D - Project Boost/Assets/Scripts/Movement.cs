@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private float rotationPower = 1f;
     [SerializeField] private AudioClip thrusterSFX;
 
+    [SerializeField] private ParticleSystem thrusterParticles;
+
     private Rigidbody rb;
     private AudioSource audioSource;
 
@@ -27,9 +29,11 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime);
             if (!audioSource.isPlaying) {
                 audioSource.PlayOneShot(thrusterSFX);
+                thrusterParticles.Play();
             }
         } else {
             audioSource.Stop();
+            thrusterParticles.Stop();
         }
     }
 
