@@ -1,8 +1,14 @@
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    private string RELOAD_LEVEL = "ReloadLevel";
+    private string LOAD_NEXT_LEVEL = "LoadNextLevel";    
+
+    [SerializeField] private float loadDelay = 2f;
+
     private void OnCollisionEnter(Collision collision) {
         string tag = collision.gameObject.tag;
         switch (tag) {
@@ -15,20 +21,27 @@ public class CollisionHandler : MonoBehaviour
                 break;
             case "Finish":
                 Debug.Log("You've made it");
-                LoadNextLevel();
+                Invoke(LOAD_NEXT_LEVEL, loadDelay);
                 break;
             default:
-                ReloadLevel();
+                StartCrashSequence();
                 break;
         }
     }
 
-    private void ReloadLevel() {
+    private void StartCrashSequence() {
+        // TODO add SFX
+        // TODO add Particle System
+        GetComponent<Movement>().enabled = false;        
+        Invoke(RELOAD_LEVEL, loadDelay);
+    }
+
+    private void ReloadLevel() { // has string reference for Invoke
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex);
     }
 
-    private void LoadNextLevel() {
+    private void LoadNextLevel() { // has string reference for Invoke
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         sceneIndex++;
         SceneManager.LoadScene(sceneIndex % SceneManager.sceneCountInBuildSettings);
