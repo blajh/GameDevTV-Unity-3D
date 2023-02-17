@@ -27,7 +27,9 @@ public class Movement : MonoBehaviour
 
     private void ProcessRotation() {
         if (Input.GetAxis("Horizontal") != 0) {
+            rb.freezeRotation = true; // freezing rotation so we can manually rotate
             transform.Rotate(Vector3.forward * rotationPower * Time.deltaTime * -Input.GetAxis("Horizontal"));
+            rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
         }
     }
 }
