@@ -5,13 +5,23 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private float thrustPower = 1000f;
+
+    private Rigidbody rb;
+
+    private void Awake() {
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void Update() {
         ProcessThrust();
         ProcessRotation();
     }
 
     private void ProcessThrust() {
-        Input.GetKey(KeyCode.Space);
+        if (Input.GetKey(KeyCode.Space)) {
+            rb.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime);
+        }
     }
 
     private void ProcessRotation() {
