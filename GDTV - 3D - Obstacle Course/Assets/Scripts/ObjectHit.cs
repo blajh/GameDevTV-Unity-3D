@@ -22,7 +22,7 @@ public class ObjectHit : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag != "Floor") {
+        if (collision.gameObject.tag == "Player") {
             initialColor = meshRenderer.material.color;
             meshRenderer.material.color = collisionColor;
             isTransitioning = true;
