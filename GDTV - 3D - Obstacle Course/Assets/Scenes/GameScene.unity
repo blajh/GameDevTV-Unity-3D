@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 462694353}
   m_Layer: 0
   m_Name: DropBox (2)
-  m_TagString: Untagged
+  m_TagString: DropBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 968929028}
   m_Layer: 0
   m_Name: DropBox
-  m_TagString: Untagged
+  m_TagString: DropBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1008,9 +1008,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &989944718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 1043108152}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 1485796186}
   m_Layer: 0
   m_Name: DropBox (1)
-  m_TagString: Untagged
+  m_TagString: DropBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1839,7 +1839,7 @@ GameObject:
   - component: {fileID: 1810713931}
   m_Layer: 0
   m_Name: DropBox (3)
-  m_TagString: Untagged
+  m_TagString: DropBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
