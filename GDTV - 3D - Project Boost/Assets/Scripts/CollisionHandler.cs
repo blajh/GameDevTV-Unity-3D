@@ -8,6 +8,14 @@ public class CollisionHandler : MonoBehaviour
     private string LOAD_NEXT_LEVEL = "LoadNextLevel";    
 
     [SerializeField] private float loadDelay = 2f;
+    [SerializeField] private AudioClip crashSFX;
+    [SerializeField] private AudioClip successSFX;
+
+    private AudioSource audioSource;
+
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision collision) {
         string tag = collision.gameObject.tag;
@@ -21,16 +29,23 @@ public class CollisionHandler : MonoBehaviour
                 break;
             case "Finish":
                 Debug.Log("You've made it");
-                Invoke(LOAD_NEXT_LEVEL, loadDelay);
+                StartSuccessSequence();                
                 break;
             default:
+                Debug.Log("Boom goes the rocket");
                 StartCrashSequence();
                 break;
         }
     }
 
+    private void StartSuccessSequence() {
+        audioSource.PlayOneShot(successSFX);
+        GetComponent<Movement>().enabled = false;        
+        Invoke(LOAD_NEXT_LEVEL, loadDelay);
+    }
+
     private void StartCrashSequence() {
-        // TODO add SFX
+        audioSource.PlayOneShot(crashSFX, .1f);
         // TODO add Particle System
         GetComponent<Movement>().enabled = false;        
         Invoke(RELOAD_LEVEL, loadDelay);
