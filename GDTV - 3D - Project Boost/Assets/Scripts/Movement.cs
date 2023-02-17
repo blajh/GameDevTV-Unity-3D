@@ -6,6 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float thrustPower = 1000f;
+    [SerializeField] private float rotationPower = 1f;
 
     private Rigidbody rb;
 
@@ -25,6 +26,8 @@ public class Movement : MonoBehaviour
     }
 
     private void ProcessRotation() {
-        Input.GetAxis("Horizontal");        
+        if (Input.GetAxis("Horizontal") != 0) {
+            transform.Rotate(Vector3.forward * rotationPower * Time.deltaTime * -Input.GetAxis("Horizontal"));
+        }
     }
 }
