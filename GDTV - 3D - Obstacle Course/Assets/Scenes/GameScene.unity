@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 507925619}
   - component: {fileID: 507925618}
   - component: {fileID: 507925617}
+  - component: {fileID: 507925620}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -150,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507925614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.797256, y: 0.75568676, z: 0.71477604}
+  m_LocalPosition: {x: 9.797256, y: 0.7555, z: 0.71477604}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -220,6 +221,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507925614}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &507925620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507925614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675a10e11a2ed274785e8872dfcb3e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionColorDuration: 1
+  collisionColor: {r: 1, g: 0, b: 0.5997324, a: 1}
 --- !u!1 &545153371
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +722,7 @@ GameObject:
   - component: {fileID: 1171888707}
   - component: {fileID: 1171888706}
   - component: {fileID: 1171888705}
+  - component: {fileID: 1171888708}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -722,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171888702}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.20274305, y: 0.75568676, z: -9.285224}
+  m_LocalPosition: {x: -0.03, y: 0.7555, z: -9.85}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -792,6 +808,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171888702}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1171888708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171888702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675a10e11a2ed274785e8872dfcb3e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionColorDuration: 1
+  collisionColor: {r: 1, g: 0, b: 0.5997324, a: 1}
 --- !u!1 &1290691139
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +905,7 @@ GameObject:
   - component: {fileID: 1298242121}
   - component: {fileID: 1298242120}
   - component: {fileID: 1298242119}
+  - component: {fileID: 1298242122}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -890,7 +921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298242116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.202744, y: 0.75568676, z: 0.71477604}
+  m_LocalPosition: {x: -10.202744, y: 0.7555, z: 0.71477604}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -960,6 +991,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298242116}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1298242122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298242116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675a10e11a2ed274785e8872dfcb3e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionColorDuration: 1
+  collisionColor: {r: 1, g: 0, b: 0.5997324, a: 1}
 --- !u!1 &1393852343
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1017,7 @@ GameObject:
   - component: {fileID: 1393852348}
   - component: {fileID: 1393852347}
   - component: {fileID: 1393852346}
+  - component: {fileID: 1393852349}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -987,7 +1033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393852343}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.20274305, y: 0.75568676, z: 10.714776}
+  m_LocalPosition: {x: -0.20274305, y: 0.7555, z: 11.23}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1057,6 +1103,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393852343}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1393852349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393852343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675a10e11a2ed274785e8872dfcb3e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionColorDuration: 1
+  collisionColor: {r: 1, g: 0, b: 0.5997324, a: 1}
 --- !u!1 &1535121428
 GameObject:
   m_ObjectHideFlags: 3
