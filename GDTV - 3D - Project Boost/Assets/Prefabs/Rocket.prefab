@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadDelay: 2
   crashSFX: {fileID: 8300000, guid: 096b3d5e2c22aea4cb813b0bdefba054, type: 3}
-  finishSFX: {fileID: 8300000, guid: 9cc436bf54266614dabeb219102f50cb, type: 3}
+  successSFX: {fileID: 8300000, guid: 9cc436bf54266614dabeb219102f50cb, type: 3}
 --- !u!82 &936653050
 AudioSource:
   m_ObjectHideFlags: 0
