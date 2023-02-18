@@ -28,39 +28,63 @@ public class Movement : MonoBehaviour
 
     private void ProcessThrust() {
         if (Input.GetKey(KeyCode.Space)) {
-            rb.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime);
-            if (!audioSource.isPlaying) {
-                audioSource.PlayOneShot(thrusterSFX);
-                if (!thrusterParticles.isPlaying) {
-                    thrusterParticles.Play();
-                }
-            }
+            StartThrusting();
         } else {
-            audioSource.Stop();
-            thrusterParticles.Stop();
+            StopThrusting();
         }
     }
 
     private void ProcessRotation() {
         float Axis = Input.GetAxis("Horizontal");
         if (Axis != 0) {
-            rb.freezeRotation = true; // freezing rotation so we can manually rotate
-            transform.Rotate(Vector3.forward * rotationPower * Time.deltaTime * -Input.GetAxis("Horizontal"));
-            rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
-            
-            if(Axis > 0) {
-                if (!leftParticles.isPlaying) {
-                    leftParticles.Play();
-                }
+            HandleRotation();
+
+            if (Axis > 0) {
+                PlayParticlesLeft();
             } else if (Axis < 0) {
-                if (!rightParticles.isPlaying) {
-                    rightParticles.Play();
-                }
+                PlayParticlesRight();
             }
 
         } else if (Axis == 0) {
-            leftParticles.Stop();
-            rightParticles.Stop();
+            StopBothParticles();
         }
+    }
+
+    private void StartThrusting() {
+        rb.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime);
+        if (!audioSource.isPlaying) {
+            audioSource.PlayOneShot(thrusterSFX);
+            if (!thrusterParticles.isPlaying) {
+                thrusterParticles.Play();
+            }
+        }
+    }
+
+    private void StopThrusting() {
+        audioSource.Stop();
+        thrusterParticles.Stop();
+    }
+
+    private void StopBothParticles() {
+        leftParticles.Stop();
+        rightParticles.Stop();
+    }
+
+    private void PlayParticlesLeft() {
+        if (!leftParticles.isPlaying) {
+            leftParticles.Play();
+        }
+    }
+
+    private void PlayParticlesRight() {
+        if (!rightParticles.isPlaying) {
+            rightParticles.Play();
+        }
+    }
+
+    private void HandleRotation() {
+        rb.freezeRotation = true; // freezing rotation so we can manually rotate
+        transform.Rotate(Vector3.forward * rotationPower * Time.deltaTime * -Input.GetAxis("Horizontal"));
+        rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
     }
 }
