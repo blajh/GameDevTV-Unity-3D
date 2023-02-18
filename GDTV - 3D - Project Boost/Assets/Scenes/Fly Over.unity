@@ -1522,11 +1522,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a927da0bcd9654bb1ce9118e4417f4, type: 3}
+--- !u!1 &1521455196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5734592075365991290, guid: 78a927da0bcd9654bb1ce9118e4417f4, type: 3}
+  m_PrefabInstance: {fileID: 841144909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1521455197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5734592075365991294, guid: 78a927da0bcd9654bb1ce9118e4417f4, type: 3}
   m_PrefabInstance: {fileID: 841144909}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1521455201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521455196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f72cb66b718d646b803aa78e35d0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -2, z: 0}
+  movementFactor: 0
+  period: 4
 --- !u!1001 &1599674034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1580,7 +1600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2757188571663059611, guid: 90b4948cf2f29ee4c957802982748f45, type: 3}
       propertyPath: m_Name
-      value: Ground (1)
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b4948cf2f29ee4c957802982748f45, type: 3}
@@ -1784,11 +1804,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1922633963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5734592075365991290, guid: 78a927da0bcd9654bb1ce9118e4417f4, type: 3}
+  m_PrefabInstance: {fileID: 1637425380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1922633964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5734592075365991294, guid: 78a927da0bcd9654bb1ce9118e4417f4, type: 3}
   m_PrefabInstance: {fileID: 1637425380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1922633968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922633963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f72cb66b718d646b803aa78e35d0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -2, z: 0}
+  movementFactor: 0
+  period: 3
 --- !u!1 &2008823397
 GameObject:
   m_ObjectHideFlags: 0
