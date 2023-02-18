@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private AudioClip thrusterSFX;
 
     [SerializeField] private ParticleSystem thrusterParticles;
+    [SerializeField] private ParticleSystem leftParticles;
+    [SerializeField] private ParticleSystem rightParticles;
 
     private Rigidbody rb;
     private AudioSource audioSource;
@@ -29,7 +31,9 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime);
             if (!audioSource.isPlaying) {
                 audioSource.PlayOneShot(thrusterSFX);
-                thrusterParticles.Play();
+                if (!thrusterParticles.isPlaying) {
+                    thrusterParticles.Play();
+                }
             }
         } else {
             audioSource.Stop();
@@ -38,10 +42,25 @@ public class Movement : MonoBehaviour
     }
 
     private void ProcessRotation() {
-        if (Input.GetAxis("Horizontal") != 0) {
+        float Axis = Input.GetAxis("Horizontal");
+        if (Axis != 0) {
             rb.freezeRotation = true; // freezing rotation so we can manually rotate
             transform.Rotate(Vector3.forward * rotationPower * Time.deltaTime * -Input.GetAxis("Horizontal"));
             rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
+            
+            if(Axis > 0) {
+                if (!leftParticles.isPlaying) {
+                    leftParticles.Play();
+                }
+            } else if (Axis < 0) {
+                if (!rightParticles.isPlaying) {
+                    rightParticles.Play();
+                }
+            }
+
+        } else if (Axis == 0) {
+            leftParticles.Stop();
+            rightParticles.Stop();
         }
     }
 }

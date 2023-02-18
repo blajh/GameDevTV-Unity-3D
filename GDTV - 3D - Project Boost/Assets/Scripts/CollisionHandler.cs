@@ -10,8 +10,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] private float loadDelay = 2f;
     [SerializeField] private AudioClip crashSFX;
     [SerializeField] private AudioClip successSFX;
-
-    [SerializeField] private ParticleSystem thrusterParticles;
+    
     [SerializeField] private ParticleSystem finishParticles;
     [SerializeField] private ParticleSystem crashParticles;
 
