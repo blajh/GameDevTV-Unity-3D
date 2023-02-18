@@ -1,4 +1,6 @@
+using System;
 using System.Globalization;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,14 +18,27 @@ public class CollisionHandler : MonoBehaviour
 
     private AudioSource audioSource;
     private bool isTransitioning = false;
+    private bool collisionsDisabled = false;
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Update() {
+        ListenForCheatKeys();
+    }
+
+    private void ListenForCheatKeys() {
+        if (Input.GetKeyDown(KeyCode.L)) {
+            LoadNextLevel();
+        } if (Input.GetKeyDown(KeyCode.C)) {
+            collisionsDisabled = !collisionsDisabled;  
+        }
+    }
+
     private void OnCollisionEnter(Collision collision) {
 
-        if(!isTransitioning) {
+        if(!isTransitioning && !collisionsDisabled) {
             string tag = collision.gameObject.tag;
             switch (tag) {
                 case "Friendly":
