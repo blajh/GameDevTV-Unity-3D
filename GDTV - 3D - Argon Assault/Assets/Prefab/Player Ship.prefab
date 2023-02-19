@@ -646,6 +646,13 @@ MonoBehaviour:
   xClampRange: 6
   yClampRange: 5
   yClampCenter: 3.5
+  positionPitchFactor: -2
+  controlPitchFactor: -10
+  positionYawFactor: 2
+  controlRollFactor: -20
+  affectPitch: 1
+  affectYaw: 1
+  affectRoll: 1
 --- !u!1 &6249649414372151688
 GameObject:
   m_ObjectHideFlags: 0
