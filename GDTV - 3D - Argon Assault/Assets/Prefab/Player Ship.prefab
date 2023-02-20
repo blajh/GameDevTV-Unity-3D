@@ -655,7 +655,7 @@ MonoBehaviour:
   affectPitch: 1
   affectYaw: 1
   affectRoll: 1
-  Lasers:
+  lasers:
   - {fileID: 1658855978035018348}
   - {fileID: 8810257103159413066}
 --- !u!1 &6249649414372151688

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.WebSockets;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool affectRoll = true;
 
     [Header("Shooting")]
-    [SerializeField] private GameObject[] Lasers = new GameObject[2];
+    [SerializeField] private GameObject[] lasers = new GameObject[2];
 
     private float xThrow, yThrow;
 
@@ -72,15 +73,16 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessFiring() {
         if (Input.GetButton("Fire1")) {            
-            ToggleLaser(true);
+            SetLasersActive(true);
         } else {            
-            ToggleLaser(false);
+            SetLasersActive(false);
         }
     }
 
-    private void ToggleLaser(bool toggle) {
-        foreach (GameObject laser in Lasers) {
-            laser.SetActive(toggle);
+    private void SetLasersActive(bool isActive) {
+        foreach (GameObject laser in lasers) {
+            var emission = laser.GetComponent<ParticleSystem>().emission;
+            emission.enabled = isActive;
         }
     }
 }
