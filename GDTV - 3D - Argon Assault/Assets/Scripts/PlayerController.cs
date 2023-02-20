@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool affectRoll = true;
 
     [Header("Shooting")]
-    [SerializeField] private ParticleSystem[] Lasers = new ParticleSystem[2];
+    [SerializeField] private GameObject[] Lasers = new GameObject[2];
 
     private float xThrow, yThrow;
 
@@ -71,11 +71,16 @@ public class PlayerController : MonoBehaviour
     }
 
     private void ProcessFiring() {
-        if (Input.GetButton("Fire1")) {
-            Debug.Log("pew pew");
-        } else {
-            Debug.Log("no pew pew");
+        if (Input.GetButton("Fire1")) {            
+            ToggleLaser(true);
+        } else {            
+            ToggleLaser(false);
         }
     }
 
+    private void ToggleLaser(bool toggle) {
+        foreach (GameObject laser in Lasers) {
+            laser.SetActive(toggle);
+        }
+    }
 }
