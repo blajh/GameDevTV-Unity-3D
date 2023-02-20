@@ -21,11 +21,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool affectYaw = true;
     [SerializeField] private bool affectRoll = true;
 
+    [Header("Shooting")]
+    [SerializeField] private ParticleSystem[] Lasers = new ParticleSystem[2];
+
     private float xThrow, yThrow;
 
     private void Update() {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     private void ProcessRotation() {
@@ -65,4 +69,13 @@ public class PlayerController : MonoBehaviour
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
+
+    private void ProcessFiring() {
+        if (Input.GetButton("Fire1")) {
+            Debug.Log("pew pew");
+        } else {
+            Debug.Log("no pew pew");
+        }
+    }
+
 }
