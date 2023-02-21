@@ -674,7 +674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc3b5e0008d5a7418b229a8d55d4c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoadDelay: 0
+  levelLoadDelay: 1
+  explosionPS: {fileID: 4058282123072524292}
 --- !u!65 &8878102899449996202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1258,5 +1259,10 @@ PrefabInstance:
 --- !u!4 &918628421381115486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8938635612130754504, guid: 7e06e01a73174514eb8d1a219096758f, type: 3}
+  m_PrefabInstance: {fileID: 8121105120269857174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4058282123072524292 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5251790912752984466, guid: 7e06e01a73174514eb8d1a219096758f, type: 3}
   m_PrefabInstance: {fileID: 8121105120269857174}
   m_PrefabAsset: {fileID: 0}
