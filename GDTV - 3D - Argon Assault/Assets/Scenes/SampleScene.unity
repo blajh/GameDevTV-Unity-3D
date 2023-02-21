@@ -1059,6 +1059,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: lengthInSec
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: ShapeModule.alignToDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100372662490633210, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075970828730300524, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: m_Name
+      value: Explosion Particle System
+      objectReference: {fileID: 0}
     - target: {fileID: 8246646093061550002, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1106,6 +1146,18 @@ PrefabInstance:
     - target: {fileID: 8246646093061550003, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
       propertyPath: m_Name
       value: Player Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660487967761680669, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660487967761680669, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660487967761680669, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6578c05830b88d541a95d6d3d66da503, type: 3}
