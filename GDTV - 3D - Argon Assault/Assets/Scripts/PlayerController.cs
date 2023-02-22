@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Shooting")]
     [SerializeField] private GameObject[] lasers = new GameObject[2];
+    [SerializeField] private int shotPower = 10;
 
     private float xThrow, yThrow;
 
@@ -84,5 +85,9 @@ public class PlayerController : MonoBehaviour
             var emission = laser.GetComponent<ParticleSystem>().emission;
             emission.enabled = isActive;
         }
+    }
+
+    public int GetShotPower() {
+        return shotPower;
     }
 }

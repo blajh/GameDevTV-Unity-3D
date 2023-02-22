@@ -255,7 +255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
+  hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
   parent: {fileID: 1460750546}
+  health: 50
   scoreAmount: 10
 --- !u!1 &75160330
 GameObject:
@@ -641,7 +643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
+  hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
   parent: {fileID: 1460750546}
+  health: 50
   scoreAmount: 10
 --- !u!1 &705507993
 GameObject:
@@ -975,7 +979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
+  hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
   parent: {fileID: 1460750546}
+  health: 50
   scoreAmount: 10
 --- !u!1 &1357109896
 GameObject:
@@ -1109,7 +1115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
+  hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
   parent: {fileID: 1460750546}
+  health: 50
   scoreAmount: 10
 --- !u!1 &1460750545
 GameObject:
@@ -1445,7 +1453,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
+  hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
   parent: {fileID: 1460750546}
+  health: 50
   scoreAmount: 10
 --- !u!1001 &8246646093237309127
 PrefabInstance:
