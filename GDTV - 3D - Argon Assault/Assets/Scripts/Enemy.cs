@@ -32,7 +32,6 @@ public class Enemy : MonoBehaviour
     }
 
     private void ProcessHit() {
-        scoreBoard.AddToScore(scoreAmount);
         CheckHealth();
     }
 
@@ -44,6 +43,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void KillEnemy() {
+        scoreBoard.AddToScore(scoreAmount);
         SpawnPS(deathVFX);
         Destroy(this.gameObject);
     }
