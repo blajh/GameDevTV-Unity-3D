@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8938635612130754504}
   - component: {fileID: 5251790912752984466}
   - component: {fileID: 1340603987485359709}
+  - component: {fileID: 7406395095292319546}
   m_Layer: 0
-  m_Name: Explosion Particle System
+  m_Name: Enemy Explosion VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +51,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -1305,9 +1306,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9956822, g: 1, b: 0.47450984, a: 1}
-        key1: {r: 1, g: 0.41498524, b: 0.2764706, a: 1}
-        key2: {r: 1, g: 0.19144298, b: 0, a: 0.8627451}
+        key0: {r: 0.47450984, g: 0.5162146, b: 1, a: 1}
+        key1: {r: 0.3660379, g: 1, b: 0.2745098, a: 1}
+        key2: {r: 1, g: 0, b: 0.5991268, a: 0.8627451}
         key3: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
         key4: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -4812,3 +4813,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &7406395095292319546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78689485404610379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3beffc8063784d443ba79d16520f3ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 3
