@@ -256,7 +256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
   hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
-  parent: {fileID: 1460750546}
   health: 50
   scoreAmount: 10
 --- !u!1 &75160330
@@ -644,7 +643,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
   hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
-  parent: {fileID: 1460750546}
   health: 50
   scoreAmount: 10
 --- !u!1 &705507993
@@ -980,7 +978,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
   hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
-  parent: {fileID: 1460750546}
   health: 50
   scoreAmount: 10
 --- !u!1 &1357109896
@@ -1116,7 +1113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
   hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
-  parent: {fileID: 1460750546}
   health: 50
   scoreAmount: 10
 --- !u!1 &1460750545
@@ -1130,7 +1126,7 @@ GameObject:
   - component: {fileID: 1460750546}
   m_Layer: 0
   m_Name: SpawnAtRuntime
-  m_TagString: Untagged
+  m_TagString: SpawnAtRuntime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,7 +1450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 78689485404610379, guid: 59471754dff797c4b9b5bfec4d0a7d24, type: 3}
   hitVFX: {fileID: 78689485404610379, guid: f8e719299f7dae34db7c6fb497252eeb, type: 3}
-  parent: {fileID: 1460750546}
   health: 50
   scoreAmount: 10
 --- !u!1001 &8246646093237309127

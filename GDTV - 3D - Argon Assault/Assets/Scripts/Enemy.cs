@@ -7,16 +7,17 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject deathVFX;
     [SerializeField] private GameObject hitVFX;
-    [SerializeField] private Transform parent;
     [SerializeField] private int health = 50;
     [SerializeField] private int scoreAmount = 10;
 
+    private GameObject parentGameObject;
     private ScoreBoard scoreBoard;
     private PlayerController playerController;
 
     private void Start() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         playerController = FindObjectOfType<PlayerController>();
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
         AddRigidbody();
     }
 
@@ -49,6 +50,6 @@ public class Enemy : MonoBehaviour
 
     private void SpawnPS(GameObject particleSystem) {
         GameObject vfx = Instantiate(particleSystem, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        vfx.transform.parent = parentGameObject.transform;
     }
 }
