@@ -2,6 +2,7 @@
 # Unity folders and files
 ###
 *.log
+/[Ll]ogs/
 Logs/
 Kenney - Tower Defense Kit/
 StarSparrow/
