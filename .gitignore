@@ -1,8 +1,9 @@
 ###
 # Unity folders and files
 ###
-PolygonWarMap/
-PolygonWar/
+*.log
+Logs/
+Kenney - Tower Defense Kit/
 StarSparrow/
 Standard Assets/
 TerrainSampleAssets/
