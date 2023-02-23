@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{4CBC657C-348B-7D97-C23B-A3935A037455}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CoordinateLabeler.cs">
+    <Files>
+      <File FileName="Assets/Script/CoordinateLabeler.cs" Line="7" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="96d20b00-34f8-43b9-a622-106d004be902" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
