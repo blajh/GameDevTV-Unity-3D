@@ -9,7 +9,21 @@ public class EnemyMover : MonoBehaviour
 	[SerializeField] [Range(0f, 5f)] private float rotationDuration = 1f;
 
     private void Start() {
+		FindPath();
+		ReturnToStart();
 		StartCoroutine(FollowPath());
+	}
+
+	private void FindPath() {
+		path.Clear();
+		GameObject waypoints = GameObject.FindGameObjectWithTag("Path");
+		foreach(Transform child in waypoints.transform) {
+			path.Add(child.GetComponent<Waypoint>());
+		}
+	}
+
+	private void ReturnToStart() {
+		transform.position = path[0].transform.position;
 	}
 
 	private IEnumerator FollowPath() {
@@ -39,5 +53,6 @@ public class EnemyMover : MonoBehaviour
 				}
             }
 		}
+		Destroy(gameObject);
 	}
 }

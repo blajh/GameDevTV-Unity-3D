@@ -124,30 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975d3f8e975df4a9d9a6010bc057460a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  path: []
   moveSpeed: 1
   rotationDuration: 1
 --- !u!114 &8645892635256673655
@@ -497,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3578b1b9d01c9df4585d76305cc6de44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
+  mode: 2
   Camera: {fileID: 939037534604749570, guid: 40e781b2cab3bd740872aa7a52899908, type: 3}
 --- !u!1001 &1332458513362331121
 PrefabInstance:
