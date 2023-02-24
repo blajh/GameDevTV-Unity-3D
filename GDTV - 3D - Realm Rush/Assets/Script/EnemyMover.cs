@@ -8,7 +8,7 @@ public class EnemyMover : MonoBehaviour
 	[SerializeField] [Range(0f, 5f)] private float moveSpeed = 1f;
 	[SerializeField] [Range(0f, 5f)] private float rotationDuration = 1f;
 
-    private void Start() {
+    private void OnEnable() {
 		FindPath();
 		ReturnToStart();
 		StartCoroutine(FollowPath());
@@ -53,6 +53,6 @@ public class EnemyMover : MonoBehaviour
 				}
             }
 		}
-		Destroy(gameObject);
+		gameObject.SetActive(false);
 	}
 }

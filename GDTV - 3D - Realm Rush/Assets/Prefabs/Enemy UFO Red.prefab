@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6652708388974566606}
   - component: {fileID: 3689263888945929218}
   - component: {fileID: 1874103860502767978}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1332458513628171706}
   - component: {fileID: 8645892635256673655}
   - component: {fileID: 2962411160118178397}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy UFO Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
-  moveSpeed: 1
-  rotationDuration: 1
+  moveSpeed: 3
+  rotationDuration: 0
 --- !u!114 &8645892635256673655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110511688499495681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4645773754432782104}
   - component: {fileID: 6211331035210511344}
   - component: {fileID: 7544005039319492140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3833502921316745111}
   - component: {fileID: 4688790839763776455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 66877717698244825}
   - component: {fileID: 5977438209880390318}
   - component: {fileID: 619477810329652861}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,6 +546,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 79bd6a75e4533454aa53daa6c96ba82b, type: 3}
       propertyPath: m_Name
       value: enemy_ufoRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79bd6a75e4533454aa53daa6c96ba82b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79bd6a75e4533454aa53daa6c96ba82b, type: 3}

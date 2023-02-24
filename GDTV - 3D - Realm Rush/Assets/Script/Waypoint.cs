@@ -7,10 +7,15 @@ public class Waypoint : MonoBehaviour
 {
     [SerializeField] private GameObject ballista;
     [SerializeField] private bool isPlaceable = false;
+    [SerializeField] private GameObject parent;
+
+    private void Awake() {
+        parent = GameObject.Find("SpawnAtRuntime");
+    }
 
     private void OnMouseDown() {
         if (isPlaceable) {
-            Instantiate(ballista, transform.position, Quaternion.identity);
+            Instantiate(ballista, transform.position, Quaternion.identity, parent.transform);
             isPlaceable = false;
         }
     }

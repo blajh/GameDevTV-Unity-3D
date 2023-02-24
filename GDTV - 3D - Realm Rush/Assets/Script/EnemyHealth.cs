@@ -10,19 +10,24 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int maxHitPoints = 5;
     private int currentHitPoints;
 
-    private void Start() {
+    private void OnEnable() {
         currentHitPoints = maxHitPoints;
+        UpdateUI();
     }
 
     private void OnTriggerEnter(Collider other) {
         currentHitPoints--;
-        hpslider.value = (float) currentHitPoints / maxHitPoints;
+        UpdateUI();
         CheckHP();
     }
 
     private void CheckHP() {
         if (currentHitPoints <= 0) {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+    }
+
+    private void UpdateUI() {
+        hpslider.value = (float) currentHitPoints / maxHitPoints;
     }
 }

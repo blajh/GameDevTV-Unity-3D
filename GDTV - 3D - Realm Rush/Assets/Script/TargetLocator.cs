@@ -11,9 +11,14 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private float weaponFireRate;
     [SerializeField] private Projectile projectile;
+    [SerializeField] private GameObject parent;
 
     private Transform target;
     private float fireRateTimer;
+
+    private void Awake() {
+        parent = GameObject.Find("SpawnAtRuntime");
+    }
 
     private void Start() {
         if (FindObjectOfType<EnemyMover>() != null) {
@@ -44,6 +49,6 @@ public class TargetLocator : MonoBehaviour
     }
 
     private void Shoot() {
-        Instantiate(projectile.gameObject, projectileSpawnPoint.position, projectileSpawnPoint.rotation);    
+        Instantiate(projectile.gameObject, projectileSpawnPoint.position, projectileSpawnPoint.rotation, parent.transform);              
     }
 }
