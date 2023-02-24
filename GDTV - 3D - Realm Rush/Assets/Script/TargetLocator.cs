@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class TargetLocator : MonoBehaviour
 {
@@ -10,30 +11,48 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] private Transform weapon;
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private float weaponFireRate;
+    [SerializeField] private float shotRange = 15f;
     [SerializeField] private Projectile projectile;
-    [SerializeField] private GameObject parent;
-
+    
+    private GameObject parent;
     private Transform target;
     private float fireRateTimer;
+    private bool hasTarget = false;
+    private bool isOutOfRange = false;
 
     private void Awake() {
         parent = GameObject.Find("SpawnAtRuntime");
-    }
-
-    private void Start() {
-        if (FindObjectOfType<EnemyMover>() != null) {
-            target = FindObjectOfType<EnemyMover>().transform;
-        }
         fireRateTimer = weaponFireRate;
     }
-
+    
     private void Update() {
+        FindClosestTarget();
         AimWeapon();
-        CheckFireRate();
+    }
+
+    private void FindClosestTarget() {
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        Transform closestTarget = null;
+        float maxDistance = Mathf.Infinity;
+
+        foreach (Enemy enemy in enemies) {
+            float targetDistance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (targetDistance < maxDistance) {
+                closestTarget = enemy.transform;
+                maxDistance = targetDistance;
+            }
+        }
+        target = closestTarget;
     }
 
     private void AimWeapon() {
-        weapon.LookAt(target);
+        if (target != null) {
+            float targetDistance = Vector3.Distance(transform.position, target.position);
+            if (targetDistance <= shotRange) {
+                weapon.LookAt(target);
+                CheckFireRate();
+            }
+        }
     }
 
     private void CheckFireRate() {

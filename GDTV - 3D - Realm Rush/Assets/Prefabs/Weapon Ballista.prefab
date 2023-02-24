@@ -184,4 +184,6 @@ MonoBehaviour:
   weapon: {fileID: 7540380043824531029}
   projectileSpawnPoint: {fileID: 1976297299376931124}
   weaponFireRate: 1
+  shotRange: 50
   projectile: {fileID: 227301951028771522, guid: c462d62a2adf9cd4fa48274eef1035c1, type: 3}
+  parent: {fileID: 0}

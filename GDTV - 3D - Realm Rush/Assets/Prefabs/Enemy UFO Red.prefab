@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1332458513628171705}
   - component: {fileID: 1332458513628171706}
   - component: {fileID: 8645892635256673655}
+  - component: {fileID: -5155671319004557415}
   - component: {fileID: 2962411160118178397}
   m_Layer: 7
   m_Name: Enemy UFO Red
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
-  moveSpeed: 3
+  moveSpeed: 2
   rotationDuration: 0
 --- !u!114 &8645892635256673655
 MonoBehaviour:
@@ -141,6 +142,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpslider: {fileID: 4688790839763776455}
   maxHitPoints: 5
+--- !u!114 &-5155671319004557415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332458513628171704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1255eb82f32d2b649bc1c28187ea33a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &2962411160118178397
 Rigidbody:
   m_ObjectHideFlags: 0
