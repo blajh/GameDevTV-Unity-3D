@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile Corner 270
       objectReference: {fileID: 0}
+    - target: {fileID: 7551676880658504470, guid: 277fd4266c893a2439327b359ed50b2c, type: 3}
+      propertyPath: isPlacable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 277fd4266c893a2439327b359ed50b2c, type: 3}

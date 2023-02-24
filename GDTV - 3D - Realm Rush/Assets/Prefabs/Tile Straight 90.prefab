@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile Straight 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7551676880658504470, guid: 3ab7bac3869a47349ad5897390ec86b1, type: 3}
+      propertyPath: isPlacable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab7bac3869a47349ad5897390ec86b1, type: 3}

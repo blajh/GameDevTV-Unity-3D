@@ -35,9 +35,6 @@ public class EnemyMover : MonoBehaviour
 				while (travelPercent < 1f) {
 					travelPercent += Time.deltaTime * moveSpeed;
 					transform.position = Vector3.Lerp(startPos, endPos, travelPercent);			
-					Debug.Log(travelPercent.ToString());
-					Debug.Log(waypoint.name);
-					Debug.Log(Time.deltaTime);
 					yield return new WaitForEndOfFrame();
 				}
             }
