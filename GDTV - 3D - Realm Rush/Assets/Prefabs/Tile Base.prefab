@@ -11,6 +11,22 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3379703249192221469, guid: 79fc418457c364208912470441632e0d, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379703249192221469, guid: 79fc418457c364208912470441632e0d, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379703249192221469, guid: 79fc418457c364208912470441632e0d, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379703249192221469, guid: 79fc418457c364208912470441632e0d, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4624197261522680458, guid: 79fc418457c364208912470441632e0d, type: 3}
       propertyPath: m_Name
       value: Tile Base
@@ -58,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 4624197261522680461, guid: 79fc418457c364208912470441632e0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263884917627043810, guid: 79fc418457c364208912470441632e0d, type: 3}
+      propertyPath: isPlaceable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fc418457c364208912470441632e0d, type: 3}

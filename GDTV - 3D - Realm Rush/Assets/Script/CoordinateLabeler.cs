@@ -7,12 +7,18 @@ using System;
 [ExecuteAlways]
 public class CoordinateLabeler : MonoBehaviour {
 
-	private TextMeshPro label;
+	[SerializeField] private Color defaultColor = Color.white;
+    [SerializeField] private Color blockedColor = Color.gray;
+
+    private TextMeshPro label;
 	private Vector2Int coordinates = new Vector2Int();
+	private Waypoint waypoint;
 
 	private void Awake() {
 		label = GetComponent<TextMeshPro>();
+		label.enabled = false;
 		DisplayCoordinates();
+		waypoint = GetComponentInParent<Waypoint>();
 	}
 
     private void Update() {
@@ -20,7 +26,18 @@ public class CoordinateLabeler : MonoBehaviour {
 			DisplayCoordinates();
 			UpdateParentName();
 		}
+
+		ColorCoordinates();
+		ToggleLabels();
 	}
+
+    private void ColorCoordinates() {
+        if (waypoint.GetIsPlaceable()) {
+			label.color = defaultColor;
+		} else {
+			label.color = blockedColor;
+		}
+    }
 
     private void DisplayCoordinates() {
 		coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
@@ -30,5 +47,11 @@ public class CoordinateLabeler : MonoBehaviour {
 
 	private void UpdateParentName() {
 		transform.parent.name = coordinates.ToString();
+	}
+
+	private void ToggleLabels() {
+		if(Input.GetKeyDown(KeyCode.C)) {
+			label.enabled = !label.IsActive();
+		}
 	}
 }

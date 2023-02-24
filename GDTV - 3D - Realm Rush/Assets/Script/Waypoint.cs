@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] private bool isPlacable = false;
     [SerializeField] private GameObject ballista;
+    [SerializeField] private bool isPlaceable = false;
 
     private void OnMouseDown() {
-        if (isPlacable) {
+        if (isPlaceable) {
             Instantiate(ballista, transform.position, Quaternion.identity);
-            isPlacable = false;
+            isPlaceable = false;
         }
+    }
+
+    public bool GetIsPlaceable() {
+        return isPlaceable;
     }
 }

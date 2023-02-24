@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449935cbb33be4ed0bba6b3e11435bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlacable: 1
   ballista: {fileID: 7201008544595533039, guid: 1e369138b70765641b45246e6d9c9f21, type: 3}
+  isPlaceable: 0
 --- !u!65 &3119174008072515520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4286611584
+  m_fontColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -246,3 +246,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d83bc50db78d4b568527da87fdf1c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  blockedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
