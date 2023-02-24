@@ -5,10 +5,12 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     [SerializeField] private bool isPlacable = false;
+    [SerializeField] private GameObject ballista;
 
     private void OnMouseDown() {
         if (isPlacable) {
-            Debug.Log(transform.name);
+            Instantiate(ballista, transform.position, Quaternion.identity);
+            isPlacable = false;
         }
     }
 }
