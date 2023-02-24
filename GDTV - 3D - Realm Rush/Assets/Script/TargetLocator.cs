@@ -16,7 +16,9 @@ public class TargetLocator : MonoBehaviour
     private float fireRateTimer;
 
     private void Start() {
-        target = FindObjectOfType<EnemyMover>().transform;
+        if (FindObjectOfType<EnemyMover>() != null) {
+            target = FindObjectOfType<EnemyMover>().transform;
+        }
         fireRateTimer = weaponFireRate;
     }
 
@@ -34,8 +36,10 @@ public class TargetLocator : MonoBehaviour
         if (fireRateTimer < weaponFireRate) {
             fireRateTimer += Time.deltaTime;            
         } else {
-            Shoot();
-            fireRateTimer = 0f;            
+            if (FindObjectOfType<EnemyMover>() != null) {
+                Shoot();
+                fireRateTimer = 0f;            
+            }
         }                  
     }
 

@@ -1693,6 +1693,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 619477810329652861, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 736183552708807901, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1332458513628171704, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
       propertyPath: m_Name
       value: Enemy UFO Red
@@ -1833,6 +1841,34 @@ PrefabInstance:
       propertyPath: path.Array.data[22]
       value: 
       objectReference: {fileID: 1159614251}
+    - target: {fileID: 3527021457609503387, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833502921316745111, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645773754432782104, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645773754432782104, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645773754432782104, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00002503395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645773754432782104, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566483447721319524, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
 --- !u!114 &923783441 stripped
@@ -4273,6 +4309,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449935cbb33be4ed0bba6b3e11435bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1973123010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8348139278565015070, guid: 5a7908c677568a3458d550804195ca1c, type: 3}
+  m_PrefabInstance: {fileID: 838266238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1973123015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973123010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3578b1b9d01c9df4585d76305cc6de44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 2
+  Camera: {fileID: 963194227}
 --- !u!1001 &1974859469
 PrefabInstance:
   m_ObjectHideFlags: 0
