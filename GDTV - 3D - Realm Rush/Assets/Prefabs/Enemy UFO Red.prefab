@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpslider: {fileID: 4688790839763776455}
   maxHitPoints: 5
+  difficultyRamp: 1
 --- !u!114 &-5155671319004557415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1255eb82f32d2b649bc1c28187ea33a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldReward: 25
+  goldPenalty: 25
 --- !u!54 &2962411160118178397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -488,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 2
-  Camera: {fileID: 939037534604749570, guid: 40e781b2cab3bd740872aa7a52899908, type: 3}
+  Camera: {fileID: 3530087777768127286, guid: 40e781b2cab3bd740872aa7a52899908, type: 3}
 --- !u!1001 &1332458513362331121
 PrefabInstance:
   m_ObjectHideFlags: 0
