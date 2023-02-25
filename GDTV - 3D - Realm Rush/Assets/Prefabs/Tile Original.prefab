@@ -46,8 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449935cbb33be4ed0bba6b3e11435bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballista: {fileID: 7201008544595533039, guid: 1e369138b70765641b45246e6d9c9f21, type: 3}
+  ballista: {fileID: 3863298944409399680, guid: 1e369138b70765641b45246e6d9c9f21, type: 3}
   isPlaceable: 0
+  parent: {fileID: 0}
 --- !u!65 &3119174008072515520
 BoxCollider:
   m_ObjectHideFlags: 0
