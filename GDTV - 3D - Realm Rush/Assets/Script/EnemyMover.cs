@@ -36,6 +36,9 @@ public class EnemyMover : MonoBehaviour
 
 			float rotationTime = 0f;
 			Vector3 targetDir = waypoint.transform.position - transform.position;
+			if (targetDir == Vector3.zero) {
+				targetDir.x = Vector3.kEpsilon;
+			}
 
             Quaternion newRot = Quaternion.LookRotation(targetDir, Vector3.up);
 
