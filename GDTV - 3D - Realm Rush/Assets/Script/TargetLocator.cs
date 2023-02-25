@@ -13,7 +13,10 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] private float weaponFireRate;
     [SerializeField] private float shotRange = 15f;
     [SerializeField] private Projectile projectile;
-    
+
+    [Header("Price")]
+    [SerializeField] private int bankPrice = 25;
+
     private GameObject parent;
     private Transform target;
     private float fireRateTimer;
@@ -69,5 +72,9 @@ public class TargetLocator : MonoBehaviour
 
     private void Shoot() {
         Instantiate(projectile.gameObject, projectileSpawnPoint.position, projectileSpawnPoint.rotation, parent.transform);              
+    }
+
+    public int GetPrice() {
+        return bankPrice;
     }
 }

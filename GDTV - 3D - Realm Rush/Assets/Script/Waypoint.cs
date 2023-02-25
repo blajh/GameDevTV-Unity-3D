@@ -14,6 +14,10 @@ public class Waypoint : MonoBehaviour
     }
 
     private void OnMouseDown() {
+        PlaceTower();
+    }
+
+    private void PlaceTower() {
         if (isPlaceable) {
             Instantiate(ballista, transform.position, Quaternion.identity, parent.transform);
             isPlaceable = false;
