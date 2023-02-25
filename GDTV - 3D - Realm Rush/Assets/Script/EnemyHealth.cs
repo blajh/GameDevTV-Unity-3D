@@ -4,10 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private Slider hpslider;
     [SerializeField] private int maxHitPoints = 5;
+
+    [Tooltip("Adds amount to Max Hit Points when enemy dies")]
+    [SerializeField] private int difficultyRamp = 1;
     private int currentHitPoints;
     private Enemy enemy;
 
@@ -30,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHitPoints <= 0) {
             gameObject.SetActive(false);
             enemy.RewardGold();
+            maxHitPoints += difficultyRamp;
         }
     }
 
