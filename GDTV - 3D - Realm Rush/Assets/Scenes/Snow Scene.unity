@@ -3258,6 +3258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3342,6 +3343,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6550995110479e24cb547bb020bb3335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunLight: {fileID: 705507994}
+  intensity: {x: 0.5, y: 0.8, z: 0.5}
+  startRotation: {x: 150, y: 40, z: 0}
+  midRotation: {x: 120, y: 0, z: 0}
+  endRotation: {x: 150, y: -40, z: 0}
+  startColor: {r: 0.6556604, g: 0.82386345, b: 1, a: 1}
+  midColor: {r: 1, g: 1, b: 1, a: 1}
+  endColor: {r: 1, g: 0.6534037, b: 0.33490568, a: 1}
+  cycleDurationSeconds: 180
+  useDebugSlider: 0
+  cyclePercentage: 0
 --- !u!4 &728584321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3098478839883666452, guid: ededce84d4cef4fa7bcaba79463f032a, type: 3}
