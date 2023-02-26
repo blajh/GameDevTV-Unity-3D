@@ -126,8 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
-  moveSpeed: 0.5
+  moveSpeed: 1
   rotationDuration: 0
+  rotateCorners: 0
 --- !u!114 &8645892635256673655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpslider: {fileID: 4688790839763776455}
-  maxHitPoints: 5
-  difficultyRamp: 1
+  maxHitPoints: 12
+  difficultyRamp: 4
 --- !u!114 &-5155671319004557415
 MonoBehaviour:
   m_ObjectHideFlags: 0

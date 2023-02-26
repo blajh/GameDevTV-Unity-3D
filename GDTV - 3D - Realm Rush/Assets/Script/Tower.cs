@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Tower : MonoBehaviour
 {
@@ -18,6 +19,21 @@ public class Tower : MonoBehaviour
         if (bank.GetBalance() >= cost) {
             Instantiate(tower.gameObject, position, Quaternion.identity, parent.transform);
             bank.Withdraw(cost);
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CanBuild() {
+
+        bank = FindObjectOfType<Bank>();
+
+        if (bank == null) {
+            return false;
+        }
+
+        if (bank.GetBalance() >= cost) {
             return true;
         }
 

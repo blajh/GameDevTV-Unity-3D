@@ -184,8 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 7540380043824531029}
   projectileSpawnPoint: {fileID: 1976297299376931124}
-  weaponFireRate: 1
-  shotRange: 50
+  weaponFireRate: 0.75
+  shotRange: 27
   projectile: {fileID: 227301951028771522, guid: c462d62a2adf9cd4fa48274eef1035c1, type: 3}
 --- !u!114 &3863298944409399680
 MonoBehaviour:
@@ -199,3 +199,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31468fbe95ebd77458b52f7e2f7a7155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 75

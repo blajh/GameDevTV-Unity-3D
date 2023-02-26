@@ -14,6 +14,7 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] private float shotRange = 15f;
     [SerializeField] private Projectile projectile;
 
+    private bool hasTarget = false;
     private GameObject parent;
     private Transform target;
     private float fireRateTimer;
@@ -24,7 +25,9 @@ public class TargetLocator : MonoBehaviour
     }
     
     private void Update() {
-        FindClosestTarget();
+        if (!hasTarget) { 
+            FindClosestTarget();
+        } 
         AimWeapon();
     }
 
@@ -40,15 +43,18 @@ public class TargetLocator : MonoBehaviour
                 maxDistance = targetDistance;
             }
         }
-        target = closestTarget;
+        target = closestTarget;        
     }
 
     private void AimWeapon() {
         if (target != null) {
             float targetDistance = Vector3.Distance(transform.position, target.position);
-            if (targetDistance <= shotRange) {
+            if (targetDistance <= shotRange && target.gameObject.activeInHierarchy) {
+                hasTarget = true;
                 weapon.LookAt(target);
                 CheckFireRate();
+            } else {
+                hasTarget = false;
             }
         }
     }
@@ -57,7 +63,7 @@ public class TargetLocator : MonoBehaviour
         // if the arrow is available
         if (fireRateTimer < weaponFireRate) {
             fireRateTimer += Time.deltaTime;            
-        } else {
+        } else if (fireRateTimer >= weaponFireRate && hasTarget && target.gameObject.activeInHierarchy) {
             if (FindObjectOfType<EnemyMover>() != null) {
                 Shoot();
                 fireRateTimer = 0f;            

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -9,12 +10,44 @@ public class Waypoint : MonoBehaviour
     [SerializeField] private bool isPlaceable = false;
     [SerializeField] private GameObject parent;
 
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Material approveMaterial;
+    [SerializeField] private Material denyMaterial;
+
     private void Awake() {
         parent = GameObject.Find("SpawnAtRuntime");
     }
 
+    private void OnMouseEnter() {
+        CheckCanBuild();
+    }
+
+    private void OnMouseExit() {
+        RenderVisual(false);
+    }
+
+    private void RenderVisual(bool state) {
+        meshRenderer.enabled = state;
+    }
+
+    private void CheckCanBuild() {
+        bool canBuild = ballista.CanBuild();
+
+        if (canBuild && isPlaceable ) {
+            meshRenderer.material = approveMaterial;
+            RenderVisual(true);
+        }
+
+        else if (!canBuild || !isPlaceable) {
+            meshRenderer.material = denyMaterial;
+            RenderVisual(true);
+        }
+        
+    }
+
     private void OnMouseDown() {
         PlaceTower();
+        CheckCanBuild();
     }
 
     private void PlaceTower() {

@@ -8,7 +8,8 @@ public class EnemyMover : MonoBehaviour
 	[SerializeField] private List<Waypoint> path = new List<Waypoint>();
 	[SerializeField] [Range(0f, 5f)] private float moveSpeed = 1f;
 	[SerializeField] [Range(0f, 5f)] private float rotationDuration = 1f;
-	private Enemy enemy;
+    [SerializeField] private bool rotateCorners = false;	
+    private Enemy enemy;
 
     private void OnEnable() {
 		FindPath();
@@ -46,13 +47,13 @@ public class EnemyMover : MonoBehaviour
 
             Quaternion newRot = Quaternion.LookRotation(targetDir, Vector3.up);
 
-            while (transform.rotation != newRot) {
+            while (transform.rotation != newRot && rotateCorners) {
                 rotationTime += Time.deltaTime;
                 transform.rotation = Quaternion.Lerp(transform.rotation, newRot, rotationTime / rotationDuration);
                 yield return null;
             }
 
-            if (transform.rotation == newRot) {
+            if (transform.rotation == newRot || !rotateCorners) {
 
                 Vector3 startPos = transform.position;
                 Vector3 endPos = waypoint.transform.position;
