@@ -44,6 +44,7 @@ public class CoordinateLabeler : MonoBehaviour {
 
 		if (!node.isWalkable) {
 			label.color = blockedColor;
+			Debug.Log("Blocked tile: " + node.coordinates);
 		} else if (node.isPath) {
 			label.color = pathColor;
 		} else if (node.isExplored) {
@@ -54,8 +55,9 @@ public class CoordinateLabeler : MonoBehaviour {
     }
 
     private void DisplayCoordinates() {
-		coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
-		coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.y);
+		if (gridManager == null) { return; }
+		coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridManager.UnityGridSize);
+		coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridManager.UnityGridSize);
 		label.text = coordinates.x + "," + coordinates.y;
     }
 

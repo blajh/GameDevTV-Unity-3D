@@ -8,14 +8,30 @@ public class Tile : MonoBehaviour
 {
     [SerializeField] private Tower ballista;
     [SerializeField] private bool isPlaceable = false;
+    [SerializeField] private bool isWalkable = false;
     [SerializeField] private GameObject parent;
 
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material approveMaterial;
     [SerializeField] private Material denyMaterial;
 
+    private GridManager gridManager;
+    private Vector2Int coordinates = new Vector2Int();
+
     private void Awake() {
         parent = GameObject.Find("SpawnAtRuntime");
+        gridManager = FindObjectOfType<GridManager>();
+    }
+
+    private void Start() {
+        if(gridManager != null) {
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
+            Debug.Log("We have grid coordinates");
+            if(!isWalkable ) {
+                gridManager.BlockNode(coordinates);
+                Debug.Log("Blocked tile: " +  coordinates);
+            }
+        }
     }
 
     private void OnMouseEnter() {
