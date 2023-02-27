@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class Waypoint : MonoBehaviour
+public class Tile : MonoBehaviour
 {
     [SerializeField] private Tower ballista;
     [SerializeField] private bool isPlaceable = false;
