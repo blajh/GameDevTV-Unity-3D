@@ -16,18 +16,20 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material denyMaterial;
 
     private GridManager gridManager;
+    private Pathfinder pathfinder;
     private Vector2Int coordinates = new Vector2Int();
 
     private void Awake() {
         parent = GameObject.Find("SpawnAtRuntime");
         gridManager = FindObjectOfType<GridManager>();
+        pathfinder = FindObjectOfType<Pathfinder>();
     }
 
     private void Start() {
         if(gridManager != null) {
             coordinates = gridManager.GetCoordinatesFromPosition(transform.position);            
             if(!isWalkable ) {
-                gridManager.BlockNode(coordinates);
+                gridManager.BlockNode(coordinates);                
             }
         }
     }
@@ -47,12 +49,12 @@ public class Tile : MonoBehaviour
     private void CheckCanBuild() {
         bool canBuild = ballista.CanBuild();
 
-        if (canBuild && isPlaceable ) {
+        if (canBuild && isPlaceable && !pathfinder.WillBlockPath(coordinates)) {
             meshRenderer.material = approveMaterial;
             RenderVisual(true);
         }
 
-        else if (!canBuild || !isPlaceable) {
+        else if (!canBuild || !isPlaceable || pathfinder.WillBlockPath(coordinates)) {
             meshRenderer.material = denyMaterial;
             RenderVisual(true);
         }
@@ -65,9 +67,12 @@ public class Tile : MonoBehaviour
     }
 
     private void PlaceTower() {
-        if (isPlaceable) {
+        if (!gridManager.Grid.ContainsKey(coordinates)) { return; }        
+        
+        if (gridManager.GetNode(coordinates).isWalkable && !pathfinder.WillBlockPath(coordinates)) {
             bool isPlaced = ballista.CreateTower(ballista, transform.position, parent);
             isPlaceable = !isPlaced;
+            gridManager.BlockNode(coordinates);
         }
     }
 

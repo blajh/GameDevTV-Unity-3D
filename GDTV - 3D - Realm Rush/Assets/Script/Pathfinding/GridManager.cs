@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour {
 
-    [SerializeField] private Vector2Int gridSize;
     [Tooltip("World Grid Size should match Unity Editor snap size")]
     [SerializeField] private int unityGridSize = 10;
+    [SerializeField] private Vector2Int gridSize;
+
     public int UnityGridSize { get { return unityGridSize; } }
 
     private Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
     public Dictionary<Vector2Int, Node> Grid { get { return grid; } }
 
     private void Awake() {
-        CreateGrid();
+        CreateGrid();        
     }
 
     private void CreateGrid() {
@@ -36,6 +37,14 @@ public class GridManager : MonoBehaviour {
     public void BlockNode(Vector2Int coordinates) {
         if (grid.ContainsKey(coordinates)) {
             grid[coordinates].isWalkable = false;
+        }
+    }
+
+    public void ResetNodes() {
+        foreach (KeyValuePair<Vector2Int, Node> entry in grid) {
+            entry.Value.connectedTo = null;
+            entry.Value.isExplored = false;
+            entry.Value.isPath = false;
         }
     }
 
