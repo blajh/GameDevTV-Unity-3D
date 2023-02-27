@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533567316428197501}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4624197261522680461}
   - component: {fileID: 3119174008072515520}
+  - component: {fileID: 3441960610369318948}
   m_Layer: 0
   m_Name: Tile Original Tower
   m_TagString: Untagged
@@ -130,6 +131,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 0, y: -0.25, z: 0}
+--- !u!114 &3441960610369318948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624197261522680458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449935cbb33be4ed0bba6b3e11435bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballista: {fileID: 3863298944409399680, guid: 1e369138b70765641b45246e6d9c9f21, type: 3}
+  isPlaceable: 0
+  parent: {fileID: 0}
+  meshRenderer: {fileID: 7200105878164167623}
+  approveMaterial: {fileID: 2100000, guid: 96f76680264b45c42bed0a00a4e66821, type: 2}
+  denyMaterial: {fileID: 2100000, guid: 40484f9a668600440886ba8208260053, type: 2}
 --- !u!1 &4784656619319077415
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +160,7 @@ GameObject:
   - component: {fileID: 3022756896480443073}
   - component: {fileID: 2853623518531215550}
   - component: {fileID: 3379703249192221469}
+  - component: {fileID: 3445853279789852699}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -302,3 +322,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2853623518531215550}
   m_maskType: 0
+--- !u!114 &3445853279789852699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784656619319077415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d83bc50db78d4b568527da87fdf1c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  blockedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
