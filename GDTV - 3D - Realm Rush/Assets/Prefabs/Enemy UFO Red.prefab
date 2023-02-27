@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975d3f8e975df4a9d9a6010bc057460a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: []
   moveSpeed: 1
   rotationDuration: 0
   rotateCorners: 0
