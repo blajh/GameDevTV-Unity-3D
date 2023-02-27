@@ -197,7 +197,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_text
-      value: 3,2
+      value: 5,6
       objectReference: {fileID: 0}
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_Enabled
@@ -714,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 1311642619220267612, guid: bdd2a80f0e57844baa9d7b518170aebe, type: 3}
       propertyPath: m_Name
       value: (5, 0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005097921872548811, guid: bdd2a80f0e57844baa9d7b518170aebe, type: 3}
+      propertyPath: m_text
+      value: 5,0
       objectReference: {fileID: 0}
     - target: {fileID: 9005097921872548811, guid: bdd2a80f0e57844baa9d7b518170aebe, type: 3}
       propertyPath: m_Enabled
@@ -1749,7 +1753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7750335962487467660, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_text
-      value: 0,2
+      value: 0,0
       objectReference: {fileID: 0}
     - target: {fileID: 7750335962487467660, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_Enabled
@@ -2997,7 +3001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 379944647024275227, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_Name
-      value: (0, 2) (1)
+      value: (0, 5)
       objectReference: {fileID: 0}
     - target: {fileID: 379944647024275227, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_IsActive
@@ -3053,7 +3057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7750335962487467660, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_text
-      value: 0,2
+      value: 0,5
       objectReference: {fileID: 0}
     - target: {fileID: 7750335962487467660, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_Enabled
@@ -3385,7 +3389,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 379944647024275227, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_Name
-      value: (0, 2) (2)
+      value: (0, 6)
       objectReference: {fileID: 0}
     - target: {fileID: 379944647024275227, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_IsActive
@@ -3441,7 +3445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7750335962487467660, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_text
-      value: 0,2
+      value: 0,6
       objectReference: {fileID: 0}
     - target: {fileID: 7750335962487467660, guid: 81b916f936d4842c39686e31802b9170, type: 3}
       propertyPath: m_Enabled
@@ -3524,6 +3528,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3098478839883666452, guid: c2ece7c8996d9497d800f0c25e9f62b7, type: 3}
   m_PrefabInstance: {fileID: 90249431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &830171505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4903332068904911454, guid: 22f6c8ce945dea049bcc40ed7dc09561, type: 3}
+  m_PrefabInstance: {fileID: 4903332068762777960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &830171508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830171505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c86a9d2f09de2b479e3c347bb3cffae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSearchNode:
+    coordinates: {x: 2, y: 1}
+    isWalkable: 0
+    isExplored: 0
+    isPath: 0
 --- !u!1001 &842291122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3689,7 +3715,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090954221846253385, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Name
-      value: (-2, 6) (1)
+      value: (-3, 6)
       objectReference: {fileID: 0}
     - target: {fileID: 2090954221846253390, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_RootOrder
@@ -3749,7 +3775,7 @@ PrefabInstance:
       objectReference: {fileID: 870712818}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_text
-      value: -2,6
+      value: -3,6
       objectReference: {fileID: 0}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Enabled
@@ -3807,6 +3833,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
+      propertyPath: m_text
+      value: 1,0
+      objectReference: {fileID: 0}
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3873,9 +3903,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 737849649501507687, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
+      propertyPath: m_text
+      value: 9,6
+      objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628080, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
       propertyPath: m_Name
-      value: Tile Tower Round Purple
+      value: (9, 6)
       objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628087, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
       propertyPath: m_RootOrder
@@ -4209,7 +4243,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_text
-      value: 1,0
+      value: 3,2
       objectReference: {fileID: 0}
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_Enabled
@@ -4450,7 +4484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090954221846253385, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Name
-      value: (-2, 1) (1)
+      value: (-3, 1)
       objectReference: {fileID: 0}
     - target: {fileID: 2090954221846253390, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_RootOrder
@@ -4510,7 +4544,7 @@ PrefabInstance:
       objectReference: {fileID: 1028740330}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_text
-      value: -2,1
+      value: -3,1
       objectReference: {fileID: 0}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Enabled
@@ -4584,9 +4618,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 737849649501507687, guid: fdd43792605af488ca250ab66631a325, type: 3}
+      propertyPath: m_text
+      value: 9,2
+      objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628080, guid: fdd43792605af488ca250ab66631a325, type: 3}
       propertyPath: m_Name
-      value: Tile Tower Top Purple (1)
+      value: (9, 2)
       objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628087, guid: fdd43792605af488ca250ab66631a325, type: 3}
       propertyPath: m_RootOrder
@@ -4646,9 +4684,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 737849649501507687, guid: fdd43792605af488ca250ab66631a325, type: 3}
+      propertyPath: m_text
+      value: 9,0
+      objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628080, guid: fdd43792605af488ca250ab66631a325, type: 3}
       propertyPath: m_Name
-      value: Tile Tower Top Purple (2)
+      value: (9, 0)
       objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628087, guid: fdd43792605af488ca250ab66631a325, type: 3}
       propertyPath: m_RootOrder
@@ -4917,7 +4959,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090954221846253385, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Name
-      value: (-2, 3) (1)
+      value: (-3, 3)
       objectReference: {fileID: 0}
     - target: {fileID: 2090954221846253390, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_RootOrder
@@ -4977,7 +5019,7 @@ PrefabInstance:
       objectReference: {fileID: 1207376860}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_text
-      value: -2,3
+      value: -3,3
       objectReference: {fileID: 0}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Enabled
@@ -5035,9 +5077,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 737849649501507687, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
+      propertyPath: m_text
+      value: 9,1
+      objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628080, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
       propertyPath: m_Name
-      value: Tile Tower Round Purple (3)
+      value: (9, 1)
       objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628087, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
       propertyPath: m_RootOrder
@@ -5950,7 +5996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005097921872548811, guid: bdd2a80f0e57844baa9d7b518170aebe, type: 3}
       propertyPath: m_text
-      value: 5,0
+      value: 8,3
       objectReference: {fileID: 0}
     - target: {fileID: 9005097921872548811, guid: bdd2a80f0e57844baa9d7b518170aebe, type: 3}
       propertyPath: m_Enabled
@@ -5970,9 +6016,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 737849649501507687, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
+      propertyPath: m_text
+      value: 9,3
+      objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628080, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
       propertyPath: m_Name
-      value: Tile Tower Round Purple (1)
+      value: (9, 3)
       objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628087, guid: ed4ac3a8b637846d4bee773547c88ea0, type: 3}
       propertyPath: m_RootOrder
@@ -6250,7 +6300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090954221846253385, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Name
-      value: (-2, 5) (1)
+      value: (-3, 5)
       objectReference: {fileID: 0}
     - target: {fileID: 2090954221846253390, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_RootOrder
@@ -6310,7 +6360,7 @@ PrefabInstance:
       objectReference: {fileID: 1389604200}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_text
-      value: -2,5
+      value: -3,5
       objectReference: {fileID: 0}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Enabled
@@ -6679,6 +6729,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
     - target: {fileID: 3015018398415249853, guid: 3239c5f3ff16f4c33930dc1f46c04657, type: 3}
+      propertyPath: m_text
+      value: -1,1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015018398415249853, guid: 3239c5f3ff16f4c33930dc1f46c04657, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -6868,9 +6922,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148969358}
     m_Modifications:
+    - target: {fileID: 737849649501507687, guid: fdd43792605af488ca250ab66631a325, type: 3}
+      propertyPath: m_text
+      value: 9,5
+      objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628080, guid: fdd43792605af488ca250ab66631a325, type: 3}
       propertyPath: m_Name
-      value: Tile Tower Top Purple
+      value: (9, 5)
       objectReference: {fileID: 0}
     - target: {fileID: 7275057785314628087, guid: fdd43792605af488ca250ab66631a325, type: 3}
       propertyPath: m_RootOrder
@@ -7789,7 +7847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b324269d245fa7841ad30a3c5446d009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 4, y: 3}
+  gridSize: {x: 7, y: 7}
 --- !u!4 &1673636801
 Transform:
   m_ObjectHideFlags: 0
@@ -7892,7 +7950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461201558219423762, guid: 54c8ac5ce7d89497a9ab734c13f69c2c, type: 3}
       propertyPath: m_Name
-      value: (-2, 4) (1)
+      value: (-3, 4)
       objectReference: {fileID: 0}
     - target: {fileID: 3461201558219423765, guid: 54c8ac5ce7d89497a9ab734c13f69c2c, type: 3}
       propertyPath: m_RootOrder
@@ -7940,7 +7998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6828517653838283141, guid: 54c8ac5ce7d89497a9ab734c13f69c2c, type: 3}
       propertyPath: m_text
-      value: -2,4
+      value: -3,4
       objectReference: {fileID: 0}
     - target: {fileID: 6828517653838283141, guid: 54c8ac5ce7d89497a9ab734c13f69c2c, type: 3}
       propertyPath: m_Enabled
@@ -8319,7 +8377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090954221846253385, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Name
-      value: (-2, 2) (1)
+      value: (-3, 2)
       objectReference: {fileID: 0}
     - target: {fileID: 2090954221846253390, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_RootOrder
@@ -8379,7 +8437,7 @@ PrefabInstance:
       objectReference: {fileID: 1809925801}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_text
-      value: -2,2
+      value: -3,2
       objectReference: {fileID: 0}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Enabled
@@ -8509,7 +8567,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_text
-      value: 3,2
+      value: 0,3
       objectReference: {fileID: 0}
     - target: {fileID: 3141064018742603927, guid: 6539926c0f91b4f38ad76a575ccfe647, type: 3}
       propertyPath: m_Enabled
@@ -9826,7 +9884,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2090954221846253385, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Name
-      value: (-2, 0) (1)
+      value: (-3, 0)
       objectReference: {fileID: 0}
     - target: {fileID: 2090954221846253390, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_RootOrder
@@ -9886,7 +9944,7 @@ PrefabInstance:
       objectReference: {fileID: 2084298631}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_text
-      value: -2,0
+      value: -3,0
       objectReference: {fileID: 0}
     - target: {fileID: 8345138306434895582, guid: cadcc6c106baa41eca538d79f6bf46e7, type: 3}
       propertyPath: m_Enabled
