@@ -70,9 +70,11 @@ public class Tile : MonoBehaviour
         if (!gridManager.Grid.ContainsKey(coordinates)) { return; }        
         
         if (gridManager.GetNode(coordinates).isWalkable && !pathfinder.WillBlockPath(coordinates)) {
-            bool isPlaced = ballista.CreateTower(ballista, transform.position, parent);
-            isPlaceable = !isPlaced;
-            gridManager.BlockNode(coordinates);
+            bool isSuccessful = ballista.CreateTower(ballista, transform.position, parent);
+            if (isSuccessful) {
+                gridManager.BlockNode(coordinates);
+                pathfinder.NotifyReceivers();
+            }
         }
     }
 

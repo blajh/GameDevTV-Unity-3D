@@ -13069,7 +13069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55574b3cd53696149bec23385cb790d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 10000
+  startingBalance: 1500
   currentBalance: 0
   scoreText: {fileID: 1242076290}
 --- !u!4 &4707131064458620931
