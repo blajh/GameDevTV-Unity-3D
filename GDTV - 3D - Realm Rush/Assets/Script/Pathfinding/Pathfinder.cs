@@ -6,7 +6,10 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
     [SerializeField] private Vector2Int startCoordinates;
+    public Vector2Int StartCoordinates { get { return startCoordinates; } }
+    
     [SerializeField] private Vector2Int destinationCoordinates;
+    public Vector2Int DestinationCoordinates { get { return destinationCoordinates; } }
 
     private Node startNode;
     private Node destinationNode;
@@ -23,12 +26,12 @@ public class Pathfinder : MonoBehaviour
         gridManager = FindObjectOfType<GridManager>();
         if (gridManager != null ) {
             grid = gridManager.Grid;
+            startNode = grid[startCoordinates];
+            destinationNode = grid[destinationCoordinates];
         }
     }
 
     private void Start() {
-        startNode = gridManager.Grid[startCoordinates];
-        destinationNode = gridManager.Grid[destinationCoordinates];
         GetNewPath();        
     }
 
@@ -59,6 +62,9 @@ public class Pathfinder : MonoBehaviour
     }
 
     private void BreadthFirstSearch() {
+        
+        startNode.isWalkable = true;
+        destinationNode.isWalkable = true;
 
         frontier.Clear();
         reached.Clear();

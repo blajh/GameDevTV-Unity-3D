@@ -13069,7 +13069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55574b3cd53696149bec23385cb790d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 150
+  startingBalance: 10000
   currentBalance: 0
   scoreText: {fileID: 1242076290}
 --- !u!4 &4707131064458620931
@@ -13133,7 +13133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4903332068904911440, guid: 22f6c8ce945dea049bcc40ed7dc09561, type: 3}
       propertyPath: poolSize
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4903332068904911454, guid: 22f6c8ce945dea049bcc40ed7dc09561, type: 3}
       propertyPath: m_Name

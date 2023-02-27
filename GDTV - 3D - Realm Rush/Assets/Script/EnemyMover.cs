@@ -1,46 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {
-	[SerializeField] private List<Tile> path = new List<Tile>();
-	[SerializeField] [Range(0f, 5f)] private float moveSpeed = 1f;
+    [SerializeField] [Range(0f, 5f)] private float moveSpeed = 1f;
 	[SerializeField] [Range(0f, 5f)] private float rotationDuration = 1f;
     [SerializeField] private bool rotateCorners = false;	
+
+	private List<Node> path = new List<Node>();
+    private GridManager gridManager;
+    private Pathfinder pathfinder;
     private Enemy enemy;
 
+    private void Awake() {
+        enemy = GetComponent<Enemy>();
+        gridManager = FindObjectOfType<GridManager>();
+        pathfinder = FindObjectOfType<Pathfinder>();
+    }
+    
     private void OnEnable() {
 		FindPath();
 		ReturnToStart();
 		StartCoroutine(FollowPath());
 	}
 
-    private void Start() {
-        enemy = GetComponent<Enemy>();
-    }
-
 	private void FindPath() {
 		path.Clear();
-		GameObject parent = GameObject.FindGameObjectWithTag("Path");
-		foreach(Transform child in parent.transform) {
-			Tile waypoint = child.GetComponent<Tile>();
-			if (waypoint != null) {
-				path.Add(waypoint);
-			}
-		}
+        path = pathfinder.GetNewPath();
 	}
 
 	private void ReturnToStart() {
-		transform.position = path[0].transform.position;
+		transform.position = gridManager.GetPositionFromCoordinates(pathfinder.StartCoordinates);
 	}
 
 	private IEnumerator FollowPath() {
-        foreach (Tile waypoint in path) {
+        for (int i = 0; i < path.Count; i++) {
 
             float rotationTime = 0f;
-            Vector3 targetDir = waypoint.transform.position - transform.position;
+            Vector3 targetDir = gridManager.GetPositionFromCoordinates(path[i].coordinates) - transform.position;
             if (targetDir == Vector3.zero) {
                 targetDir.x = Vector3.kEpsilon;
             }
@@ -56,7 +56,7 @@ public class EnemyMover : MonoBehaviour
             if (transform.rotation == newRot || !rotateCorners) {
 
                 Vector3 startPos = transform.position;
-                Vector3 endPos = waypoint.transform.position;
+                Vector3 endPos = gridManager.GetPositionFromCoordinates(path[i].coordinates);
                 float travelPercent = 0f;
 
                 while (travelPercent < 1f) {
