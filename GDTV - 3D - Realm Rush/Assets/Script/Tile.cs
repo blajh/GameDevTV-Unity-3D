@@ -25,11 +25,9 @@ public class Tile : MonoBehaviour
 
     private void Start() {
         if(gridManager != null) {
-            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
-            Debug.Log("We have grid coordinates");
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);            
             if(!isWalkable ) {
                 gridManager.BlockNode(coordinates);
-                Debug.Log("Blocked tile: " +  coordinates);
             }
         }
     }

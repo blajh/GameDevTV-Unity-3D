@@ -18,10 +18,10 @@ public class CoordinateLabeler : MonoBehaviour {
 	private GridManager gridManager;
 
 	private void Awake() {
+		gridManager = FindObjectOfType<GridManager>();
 		label = GetComponent<TextMeshPro>();
 		label.enabled = false;
 		DisplayCoordinates();		
-		gridManager = FindObjectOfType<GridManager>();
 	}
 
     private void Update() {
@@ -44,7 +44,6 @@ public class CoordinateLabeler : MonoBehaviour {
 
 		if (!node.isWalkable) {
 			label.color = blockedColor;
-			Debug.Log("Blocked tile: " + node.coordinates);
 		} else if (node.isPath) {
 			label.color = pathColor;
 		} else if (node.isExplored) {

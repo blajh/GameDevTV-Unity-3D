@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballista: {fileID: 3863298944409399680, guid: 1e369138b70765641b45246e6d9c9f21, type: 3}
   isPlaceable: 0
+  isWalkable: 0
   parent: {fileID: 0}
   meshRenderer: {fileID: 8718340185989225440}
   approveMaterial: {fileID: 2100000, guid: 96f76680264b45c42bed0a00a4e66821, type: 2}
@@ -161,7 +162,6 @@ GameObject:
   - component: {fileID: 2853623518531215550}
   - component: {fileID: 3379703249192221469}
   - component: {fileID: 3099531858542793750}
-  - component: {fileID: 5025774345823643991}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4784656619319077415}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -339,17 +339,3 @@ MonoBehaviour:
   blockedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   exploredColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   pathColor: {r: 1, g: 0.5, b: 0, a: 1}
---- !u!114 &5025774345823643991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4784656619319077415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3578b1b9d01c9df4585d76305cc6de44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 2
-  Camera: {fileID: 3530087777768127286, guid: 40e781b2cab3bd740872aa7a52899908, type: 3}
