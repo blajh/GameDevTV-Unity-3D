@@ -3545,8 +3545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c86a9d2f09de2b479e3c347bb3cffae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCoordinates: {x: 0, y: 1}
-  destinationCoordinates: {x: 3, y: 2}
+  startCoordinates: {x: 3, y: 3}
+  destinationCoordinates: {x: 1, y: 1}
 --- !u!1001 &842291122
 PrefabInstance:
   m_ObjectHideFlags: 0
