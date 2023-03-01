@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     // [SerializeField] private int maxHealth = 200;
     [SerializeField] private int startHealth = 100;
     [SerializeField] private int currentHealth;
-    [SerializeField] private ParticleSystem bloodSplatFX;
 
     private void Start() {
         currentHealth = startHealth;
     }
 
-    public void TakeDamage(int damage) {        
-        bloodSplatFX.Play();
-        currentHealth -= damage;
-        if (currentHealth <= 0) { 
-            Destroy(gameObject);
+    public void Damage(int damage) {
+        currentHealth -= damage;        
+        if(currentHealth < 0) {
+            Debug.Log("Player Died");
         }
-    }
+    }        
 }
