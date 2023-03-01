@@ -13,7 +13,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startHealth;
     }
 
-    public void TakeDamage(int damage) {        
+    public void TakeDamage(int damage) {
+        BroadcastMessage("OnDamageTaken");
         bloodSplatFX.Play();
         currentHealth -= damage;
         if (currentHealth <= 0) { 
