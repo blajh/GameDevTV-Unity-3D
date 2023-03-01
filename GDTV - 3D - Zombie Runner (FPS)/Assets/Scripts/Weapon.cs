@@ -11,22 +11,27 @@ public class Weapon : MonoBehaviour
     [SerializeField] private int damage = 20;
     [SerializeField] private ParticleSystem muzzleFlashFX;
     [SerializeField] private GameObject hitEffectVFX;
-     
+    [SerializeField] private Ammo ammoSlot;     
 
     private void Update() {
         if (Input.GetButtonDown("Fire1")) {
-            Shoot();
+            Shoot();            
         }
     }
 
     private void Shoot() {
-        PlayAnimation();
-        PlayMuzzleFlash();
-        ProcessRayCast();
+        if (ammoSlot.GetCurrentAmmo() >= 1) {
+            ammoSlot.ReduceCurrentAmmo();
+            PlayAnimation("shoot");
+            PlayMuzzleFlash();
+            ProcessRayCast();
+        } else {
+            PlayAnimation("shootNoAmmo");
+        }
     }
 
-    private void PlayAnimation() {
-        GetComponent<Animator>().SetTrigger("shoot");
+    private void PlayAnimation(string trigger) {
+        GetComponent<Animator>().SetTrigger(trigger);
     }
 
     private void PlayMuzzleFlash() {
