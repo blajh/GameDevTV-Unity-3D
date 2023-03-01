@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chaseRange: 10
+  turnSpeed: 5
 --- !u!114 &4505457175404940127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255c05b7c5423d440a27f038e1179cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  startHealth: 100
+  currentHealth: 0
   bloodSplatFX: {fileID: 6392855080940164503}
 --- !u!95 &8859195228906123325
 Animator:
@@ -284,7 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a68adba527f1c49b91221e2fb85b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   damage: 40
 --- !u!1001 &6392855080920618167
 PrefabInstance:
