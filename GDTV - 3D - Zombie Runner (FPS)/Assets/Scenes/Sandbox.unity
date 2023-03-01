@@ -315,6 +315,10 @@ PrefabInstance:
       propertyPath: startHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7403664487013770087, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 1734027352}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!1001 &131814185
@@ -2042,7 +2046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: i'm done
+  m_text: I'm done
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf0fc2c553ebfa649a37bb79a37401ee, type: 2}
   m_sharedMaterial: {fileID: 1458593023832593876, guid: cf0fc2c553ebfa649a37bb79a37401ee, type: 2}
