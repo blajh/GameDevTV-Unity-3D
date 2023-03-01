@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private int damage = 20;
     [SerializeField] private ParticleSystem muzzleFlashFX;
     [SerializeField] private GameObject hitEffectVFX;
+     
 
     private void Update() {
         if (Input.GetButtonDown("Fire1")) {
@@ -19,8 +20,13 @@ public class Weapon : MonoBehaviour
     }
 
     private void Shoot() {
+        PlayAnimation();
         PlayMuzzleFlash();
         ProcessRayCast();
+    }
+
+    private void PlayAnimation() {
+        GetComponent<Animator>().SetTrigger("shoot");
     }
 
     private void PlayMuzzleFlash() {
