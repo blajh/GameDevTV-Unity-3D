@@ -307,9 +307,10 @@ MonoBehaviour:
   FPCamera: {fileID: 0}
   range: 100
   damage: 20
+  fireRateTime: 1
+  ammoSlot: {fileID: 0}
   muzzleFlashFX: {fileID: 6318926611471521913}
   hitEffectVFX: {fileID: 996360812104113624, guid: 2300abb60829ae24a9133cf6a08518d1, type: 3}
-  ammoSlot: {fileID: 0}
 --- !u!114 &2682038957342075524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +330,10 @@ MonoBehaviour:
   zoomSpeed: 5
   zoomedOutSensitivity: 2
   zoomedInSensitivity: 1
+  weapons: []
+  zoomedInTransformPosition: {x: 0, y: -0.25, z: 0.51}
+  zoomedOutTransformPosition: {x: 0.29, y: -0.25, z: 0.51}
+  moveSpeed: 5
 --- !u!1 &8805379719559131822
 GameObject:
   m_ObjectHideFlags: 0

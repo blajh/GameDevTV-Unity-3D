@@ -16,20 +16,32 @@ public class WeaponZoom : MonoBehaviour
     [Header("Mouse Sensitivity")]
     [SerializeField] private float zoomedOutSensitivity = 2f;
     [SerializeField] private float zoomedInSensitivity = 0.5f;
+        
+    private WeaponMove weaponMove;
 
     private void Awake() {
         playerCamera.fieldOfView = zoomedOutFOV;
+    }
+
+    private void Start() {
+        weaponMove = FindObjectOfType<WeaponMove>();
+    }
+
+    private void OnEnable() {
+        weaponMove = FindObjectOfType<WeaponMove>();
     }
 
     private void Update() {
         CheckZoom();
     }
 
-    private void CheckZoom() {
-        if (Input.GetMouseButton(1) && playerCamera.fieldOfView > zoomedInFOV){
+    public void CheckZoom() {
+        if (Input.GetMouseButton(1)) {
             Zoom(zoomedInFOV, zoomedInSensitivity);
-        } else if (!Input.GetMouseButton(1) && playerCamera.fieldOfView < zoomedOutFOV) {
+            weaponMove.MoveWeaponsIn();
+        } else if (!Input.GetMouseButton(1)) {
             Zoom(zoomedOutFOV, zoomedOutSensitivity);
+            weaponMove.MoveWeaponsOut();
         }
     }
 

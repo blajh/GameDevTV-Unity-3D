@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4672650962358552447}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.29, y: -0.25, z: 0.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -141,9 +141,10 @@ MonoBehaviour:
   FPCamera: {fileID: 0}
   range: 100
   damage: 20
+  fireRateTime: 1
+  ammoSlot: {fileID: 0}
   muzzleFlashFX: {fileID: 1798911593761548869}
   hitEffectVFX: {fileID: 996360812104113624, guid: 2300abb60829ae24a9133cf6a08518d1, type: 3}
-  ammoSlot: {fileID: 0}
 --- !u!114 &4668402645176657716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,10 @@ MonoBehaviour:
   zoomSpeed: 5
   zoomedOutSensitivity: 2
   zoomedInSensitivity: 1.5
+  weapons: []
+  zoomedInTransformPosition: {x: 0, y: -0.25, z: 0.51}
+  zoomedOutTransformPosition: {x: 0.29, y: -0.25, z: 0.51}
+  moveSpeed: 5
 --- !u!1 &4672755415027232117
 GameObject:
   m_ObjectHideFlags: 0
