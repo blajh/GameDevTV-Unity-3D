@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 573483710157545253}
   - component: {fileID: 4446337133157208380}
   - component: {fileID: 7079816494180438445}
+  - component: {fileID: 6851300574645460528}
   m_Layer: 0
   m_Name: SM_Wep_Rifle_Assault_01
   m_TagString: Untagged
@@ -312,6 +313,24 @@ MonoBehaviour:
   muzzleFlashFX: {fileID: 2415592110163697863}
   hitEffectVFX: {fileID: 996360812104113624, guid: 2300abb60829ae24a9133cf6a08518d1, type: 3}
   ammoSlot: {fileID: 0}
+--- !u!114 &6851300574645460528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510098997999541749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6268e7af0a878948a6f6912dc15b5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  zoomedOutFOV: 60
+  zoomedInFOV: 30
+  zoomSpeed: 5
+  zoomedOutSensitivity: 2
+  zoomedInSensitivity: 0.5
 --- !u!1 &510268733764064373
 GameObject:
   m_ObjectHideFlags: 0

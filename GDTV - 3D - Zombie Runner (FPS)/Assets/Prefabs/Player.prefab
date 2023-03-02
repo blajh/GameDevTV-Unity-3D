@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 3485071767788677078}
   - component: {fileID: 2817415698194398717}
   - component: {fileID: 6260689376372979701}
-  - component: {fileID: 2071082704192163337}
   - component: {fileID: 1464746151977284073}
   m_Layer: 0
   m_Name: Player
@@ -199,24 +198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &2071082704192163337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3485071767782101556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6268e7af0a878948a6f6912dc15b5c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 3485071767783477266}
-  zoomedOutFOV: 60
-  zoomedInFOV: 30
-  zoomSpeed: 10
-  zoomedOutSensitivity: 2
-  zoomedInSensitivity: 0.5
 --- !u!114 &1464746151977284073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,6 +435,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Wep_Rifle_Assault_01
       objectReference: {fileID: 0}
+    - target: {fileID: 510098997999541749, guid: ec444476be11d2244bd8db8c11c7d884, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851300574645460528, guid: ec444476be11d2244bd8db8c11c7d884, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 3485071767783477266}
+    - target: {fileID: 6851300574645460528, guid: ec444476be11d2244bd8db8c11c7d884, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 3485071767788677078}
     - target: {fileID: 7079816494180438445, guid: ec444476be11d2244bd8db8c11c7d884, type: 3}
       propertyPath: FPCamera
       value: 
@@ -484,6 +477,14 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 1464746151977284073}
+    - target: {fileID: 4668402645176657716, guid: 3d9576ee35139214aaf52ed5210b5047, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 3485071767783477266}
+    - target: {fileID: 4668402645176657716, guid: 3d9576ee35139214aaf52ed5210b5047, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 3485071767788677078}
     - target: {fileID: 4669475462111034361, guid: 3d9576ee35139214aaf52ed5210b5047, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -550,13 +551,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3485071767116622829}
     m_Modifications:
+    - target: {fileID: 2682038957342075524, guid: 1b37cbe33ec5ba341a98b32ec1f71107, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 3485071767783477266}
+    - target: {fileID: 2682038957342075524, guid: 1b37cbe33ec5ba341a98b32ec1f71107, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 3485071767788677078}
     - target: {fileID: 8805302185970723166, guid: 1b37cbe33ec5ba341a98b32ec1f71107, type: 3}
       propertyPath: m_Name
       value: SM_Wep_Pistol_Heavy_01
       objectReference: {fileID: 0}
     - target: {fileID: 8805302185970723166, guid: 1b37cbe33ec5ba341a98b32ec1f71107, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8806767020107590463, guid: 1b37cbe33ec5ba341a98b32ec1f71107, type: 3}
       propertyPath: FPCamera

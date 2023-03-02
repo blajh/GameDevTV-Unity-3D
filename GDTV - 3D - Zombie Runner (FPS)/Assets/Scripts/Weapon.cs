@@ -6,17 +6,30 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Weapon : MonoBehaviour
 {
+    [Header("Camera")]
     [SerializeField] private Camera FPCamera;
+    
+    [Header("Stats")]
     [SerializeField] private float range = 100f;
     [SerializeField] private int damage = 20;
+    [SerializeField] private float fireRateTime = 1f;
+    [SerializeField] private Ammo ammoSlot;
+    
+    [Header("Effecs")]
     [SerializeField] private ParticleSystem muzzleFlashFX;
     [SerializeField] private GameObject hitEffectVFX;
-    [SerializeField] private Ammo ammoSlot;     
 
+    private float timeSinceShot = 0f;
+    
     private void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        timeSinceShot += Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && IsFireRateReady()) {
             Shoot();            
         }
+    }
+
+    private bool IsFireRateReady() {
+        return timeSinceShot >= fireRateTime;
     }
 
     private void Shoot() {
@@ -28,6 +41,7 @@ public class Weapon : MonoBehaviour
         } else {
             PlayAnimation("shootNoAmmo");
         }
+        timeSinceShot = 0f;
     }
 
     private void PlayAnimation(string trigger) {
