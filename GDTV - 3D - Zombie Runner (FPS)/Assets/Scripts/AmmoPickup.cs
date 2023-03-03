@@ -13,20 +13,8 @@ public class AmmoPickup : MonoBehaviour
         if (other.gameObject.GetComponent<Ammo>() != null) {
             ammo = other.gameObject.GetComponent<Ammo>();
 
-            switch (ammoType) {
-                case AmmoType.Bullets:
-                    ammo.IncreaseCurrentAmmo(ammoType, ammoAmount);
-                    Destroy(gameObject);
-                    return;
-                case AmmoType.Rockets:
-                    ammo.IncreaseCurrentAmmo(ammoType, ammoAmount);
-                    Destroy(gameObject);
-                    return;
-                case AmmoType.Shells:
-                    ammo.IncreaseCurrentAmmo(ammoType, ammoAmount);
-                    Destroy(gameObject);
-                    return;
-            }
+            ammo.IncreaseCurrentAmmo(ammoType, ammoAmount);
+            Destroy(gameObject);
         }
     }
 }
