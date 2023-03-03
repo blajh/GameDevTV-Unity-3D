@@ -21,28 +21,28 @@ public class Weapon : MonoBehaviour
 
     private float timeSinceShot = 0f;
     
-    private void Update() {
-        timeSinceShot += Time.deltaTime;
-        if (Input.GetMouseButtonDown(0) && IsFireRateReady()) {
-            Shoot();            
-        }
-    }
+    //private void Update() {
+    //    timeSinceShot += Time.deltaTime;
+    //    if (Input.GetMouseButtonDown(0) && IsFireRateReady()) {
+    //        Shoot();            
+    //    }
+    //}
 
     private bool IsFireRateReady() {
         return timeSinceShot >= fireRateTime;
     }
 
-    private void Shoot() {
-        if (ammoSlot.GetCurrentAmmo() >= 1) {
-            ammoSlot.ReduceCurrentAmmo();
-            PlayAnimation("shoot");
-            PlayMuzzleFlash();
-            ProcessRayCast();
-        } else {
-            PlayAnimation("shootNoAmmo");
-        }
-        timeSinceShot = 0f;
-    }
+    //private void Shoot() {
+    //    if (ammoSlot.GetCurrentAmmo() >= 1) {
+    //        ammoSlot.ReduceCurrentAmmo();
+    //        PlayAnimation("shoot");
+    //        PlayMuzzleFlash();
+    //        ProcessRayCast();
+    //    } else {
+    //        PlayAnimation("shootNoAmmo");
+    //    }
+    //    timeSinceShot = 0f;
+    //}
 
     private void PlayAnimation(string trigger) {
         GetComponent<Animator>().SetTrigger(trigger);
