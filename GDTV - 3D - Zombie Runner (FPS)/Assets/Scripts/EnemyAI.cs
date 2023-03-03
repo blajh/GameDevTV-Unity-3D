@@ -10,27 +10,27 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private float chaseRange = 5f;
     [SerializeField] private float turnSpeed = 5f;
-    
+    [SerializeField] private Animator animator;
+
     private NavMeshAgent navMeshAgent;
     private float distanceToTarget = Mathf.Infinity;
     private bool isProvoked = false;
-    private Animator animator;
-
-    private void Awake() {
-        animator = GetComponent<Animator>();
-    }
+    private bool isAttacking = false;
+    private bool isAlive = true;
 
     private void Start() {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Update() {
-        distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (isProvoked) {
-            EngageTarget();
-        } else if (distanceToTarget <= chaseRange) {
-            isProvoked = true;
-        }        
+        if (isAlive) {
+            distanceToTarget = Vector3.Distance(target.position, transform.position);
+            if (isProvoked) {
+                EngageTarget();
+            } else if (distanceToTarget <= chaseRange) {
+                isProvoked = true;
+            }        
+        }
     }
 
     public void OnDamageTaken() {
@@ -40,13 +40,18 @@ public class EnemyAI : MonoBehaviour
     private void EngageTarget() {
 
         FaceTarget();
-        if (distanceToTarget > navMeshAgent.stoppingDistance) {
+        if (distanceToTarget > navMeshAgent.stoppingDistance && !isAttacking) {
             ChaseTarget();
         }
 
         else if (distanceToTarget <= navMeshAgent.stoppingDistance) {
             AttackTarget();
+            isAttacking = true;
         }
+    }
+
+    public void AttackFinished() {
+        isAttacking = false;
     }
 
     private void AttackTarget() {        
@@ -68,5 +73,10 @@ public class EnemyAI : MonoBehaviour
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+    }
+
+    public void Die() {
+        isAlive = false;
+        animator.SetBool("attack", false);
     }
 }

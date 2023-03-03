@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int startHealth = 100;
     [SerializeField] private int currentHealth;
     [SerializeField] private ParticleSystem bloodSplatFX;
+    [SerializeField] private Animator animator;
+    [SerializeField] private EnemyAI enemyAI;
 
     private void Start() {
         currentHealth = startHealth;
@@ -17,8 +19,9 @@ public class EnemyHealth : MonoBehaviour
         BroadcastMessage("OnDamageTaken");
         bloodSplatFX.Play();
         currentHealth -= damage;
-        if (currentHealth <= 0) { 
-            Destroy(gameObject);
+        if (currentHealth <= 0) {
+            animator.SetTrigger("die");
+            enemyAI.Die();
         }
     }
 }
