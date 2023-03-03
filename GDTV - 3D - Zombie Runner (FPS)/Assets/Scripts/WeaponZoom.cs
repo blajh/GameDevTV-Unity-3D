@@ -18,6 +18,7 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] private float zoomedInSensitivity = 0.5f;
         
     private WeaponMove weaponMove;
+    private bool weaponSwitched = false;
 
     private void Awake() {
         playerCamera.fieldOfView = zoomedOutFOV;
@@ -33,10 +34,14 @@ public class WeaponZoom : MonoBehaviour
 
     private void Update() {
         CheckZoom();
+        CheckSwitch();
     }
 
     public void CheckZoom() {
-        if (Input.GetMouseButton(1)) {
+        if (weaponSwitched) {
+            Zoom(zoomedOutFOV, zoomedOutSensitivity);
+            weaponMove.MoveWeaponsOut();
+        } else if (Input.GetMouseButton(1)) {
             Zoom(zoomedInFOV, zoomedInSensitivity);
             weaponMove.MoveWeaponsIn();
         } else if (!Input.GetMouseButton(1)) {
@@ -45,9 +50,23 @@ public class WeaponZoom : MonoBehaviour
         }
     }
 
+    private void CheckSwitch() {
+        if (Input.GetMouseButtonDown(1)) {
+            NewZoom();
+        }    
+    }
+
     private void Zoom(float targetFOV, float targetSensitivity) {
         playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * zoomSpeed);
         fpsController.mouseLook.XSensitivity = Mathf.Lerp(fpsController.mouseLook.XSensitivity, targetSensitivity, Time.deltaTime * zoomSpeed);
         fpsController.mouseLook.YSensitivity = Mathf.Lerp(fpsController.mouseLook.YSensitivity, targetSensitivity, Time.deltaTime * zoomSpeed);
+    }
+
+    public void SwitchWeapon() {
+        weaponSwitched = true;
+    }
+
+    private void NewZoom() {
+        weaponSwitched = false;
     }
 }

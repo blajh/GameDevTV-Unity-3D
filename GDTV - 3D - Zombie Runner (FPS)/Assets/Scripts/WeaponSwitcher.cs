@@ -12,13 +12,15 @@ public class WeaponSwitcher : MonoBehaviour
     }
 
     private void SetWeaponActive() {
+                
         int weaponIndex = 0;
 
         foreach (Transform weapon in transform) {
+            weapon.GetComponent<WeaponZoom>().SwitchWeapon();
             if (weaponIndex == currentWeaponIndex) {
                 weapon.gameObject.SetActive(true);
-                weapon.GetComponent<WeaponZoom>().CheckZoom();
-            } else {
+                weapon.GetComponent<WeaponZoom>().CheckZoom();                
+            } else {                
                 weapon.gameObject.SetActive(false);
             }
             weaponIndex++;
