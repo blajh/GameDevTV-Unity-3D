@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
         animator.SetBool("attack", true);
     }
 
-   public bool IsPlayerInRange() {
+    public bool IsPlayerInRange() {
         return distanceToTarget <= navMeshAgent.stoppingDistance + 0.5f;
     }
 
