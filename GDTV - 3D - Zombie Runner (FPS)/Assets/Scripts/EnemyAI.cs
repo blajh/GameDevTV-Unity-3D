@@ -16,8 +16,8 @@ public class EnemyAI : MonoBehaviour
     private float distanceToTarget = Mathf.Infinity;
     private bool isProvoked = false;
     private bool isAttacking = false;
-    private bool isAlive = true;
-
+    private bool isAlive = true;    
+    
     private void Start() {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
@@ -56,6 +56,10 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackTarget() {        
         animator.SetBool("attack", true);
+    }
+
+   public bool IsPlayerInRange() {
+        return distanceToTarget <= navMeshAgent.stoppingDistance + 0.5f;
     }
 
     private void ChaseTarget() {
