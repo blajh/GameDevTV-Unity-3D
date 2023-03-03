@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 543810698051154599}
   - component: {fileID: 3782999857416374624}
   m_Layer: 0
-  m_Name: Enemy Wretch
+  m_Name: Enemy Wretch Blonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,63 +120,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 40
---- !u!1001 &2688448501190456559
+--- !u!1001 &2426914944208449917
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 4265484690079707170}
     m_Modifications:
-    - target: {fileID: 1934411384314746, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 1668862118035858, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_Name
-      value: SM_Chr_Attach_Wretch_Hair_02
+      value: SM_Chr_Attach_Wretch_Hair_01
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4464732058057208, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+    - target: {fileID: 4667904107071750, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 223cea40da862d94f858630e0cbcc16a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6fb30f56a5e439d42b2f2c5d9c36c5c1, type: 3}
 --- !u!1001 &7042893485968026959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ PrefabInstance:
     - target: {fileID: -6787853972864715929, guid: b0fb309cd6e2e1248a95b9ae5b126df9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 68021691667e41745913058504a1d954, type: 2}
+      objectReference: {fileID: 2100000, guid: 9a5cc3b3425aaa14dbbc32ffd2e60b9c, type: 2}
     - target: {fileID: 919132149155446097, guid: b0fb309cd6e2e1248a95b9ae5b126df9, type: 3}
       propertyPath: m_Name
       value: Wretch Zombie
