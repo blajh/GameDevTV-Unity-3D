@@ -14,35 +14,36 @@ public class Weapon : MonoBehaviour
     [SerializeField] private int damage = 20;
     [SerializeField] private float fireRateTime = 1f;
     [SerializeField] private Ammo ammoSlot;
-    
+    [SerializeField] private AmmoType ammoType;
+
     [Header("Effecs")]
     [SerializeField] private ParticleSystem muzzleFlashFX;
     [SerializeField] private GameObject hitEffectVFX;
 
     private float timeSinceShot = 0f;
-    
-    //private void Update() {
-    //    timeSinceShot += Time.deltaTime;
-    //    if (Input.GetMouseButtonDown(0) && IsFireRateReady()) {
-    //        Shoot();            
-    //    }
-    //}
+
+    private void Update() {
+        timeSinceShot += Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && IsFireRateReady()) {
+            Shoot();
+        }
+    }
 
     private bool IsFireRateReady() {
         return timeSinceShot >= fireRateTime;
     }
 
-    //private void Shoot() {
-    //    if (ammoSlot.GetCurrentAmmo() >= 1) {
-    //        ammoSlot.ReduceCurrentAmmo();
-    //        PlayAnimation("shoot");
-    //        PlayMuzzleFlash();
-    //        ProcessRayCast();
-    //    } else {
-    //        PlayAnimation("shootNoAmmo");
-    //    }
-    //    timeSinceShot = 0f;
-    //}
+    private void Shoot() {
+        if (ammoSlot.GetCurrentAmmo(ammoType) >= 1) {
+            ammoSlot.ReduceCurrentAmmo(ammoType);
+            PlayAnimation("shoot");
+            PlayMuzzleFlash();
+            ProcessRayCast();
+        } else {
+            PlayAnimation("shootNoAmmo");
+        }
+        timeSinceShot = 0f;
+    }
 
     private void PlayAnimation(string trigger) {
         GetComponent<Animator>().SetTrigger(trigger);

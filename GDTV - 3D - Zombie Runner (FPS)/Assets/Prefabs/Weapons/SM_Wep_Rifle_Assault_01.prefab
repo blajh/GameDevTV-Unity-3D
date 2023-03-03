@@ -312,6 +312,7 @@ MonoBehaviour:
   damage: 20
   fireRateTime: 1
   ammoSlot: {fileID: 0}
+  ammoType: 2
   muzzleFlashFX: {fileID: 2415592110163697863}
   hitEffectVFX: {fileID: 996360812104113624, guid: 2300abb60829ae24a9133cf6a08518d1, type: 3}
 --- !u!114 &6851300574645460528
@@ -333,10 +334,6 @@ MonoBehaviour:
   zoomSpeed: 5
   zoomedOutSensitivity: 2
   zoomedInSensitivity: 0.5
-  weapons: []
-  zoomedInTransformPosition: {x: 0, y: -0.25, z: 0.51}
-  zoomedOutTransformPosition: {x: 0.29, y: -0.25, z: 0.51}
-  moveSpeed: 5
 --- !u!1 &510268733764064373
 GameObject:
   m_ObjectHideFlags: 0
