@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   currentHealth: 0
+  bloodImage: {fileID: 0}
 --- !u!114 &6260689376372979701
 MonoBehaviour:
   m_ObjectHideFlags: 0
