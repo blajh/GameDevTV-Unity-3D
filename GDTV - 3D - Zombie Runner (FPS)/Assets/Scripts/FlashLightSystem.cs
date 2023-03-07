@@ -10,9 +10,13 @@ public class FlashLightSystem : MonoBehaviour
     [SerializeField] private float minimumAngle = 20f;
 
     private Light myLight;
+    private float initialAngle;
+    private float initialIntensity;
 
     private void Awake() {
         myLight = GetComponent<Light>();
+        initialIntensity = myLight.intensity;
+        initialAngle = myLight.spotAngle;
     }
 
     private void Update() {
@@ -29,5 +33,10 @@ public class FlashLightSystem : MonoBehaviour
 
     private void DecreaseLightIntensity() {
         myLight.intensity -= lightIntensityDecay * Time.deltaTime;
+    }
+
+    public void ResetFlashLight() {
+        myLight.intensity = initialIntensity;
+        myLight.spotAngle = initialAngle;
     }
 }
