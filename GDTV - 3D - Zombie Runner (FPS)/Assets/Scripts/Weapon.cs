@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -20,13 +21,21 @@ public class Weapon : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleFlashFX;
     [SerializeField] private GameObject hitEffectVFX;
 
+    [Header("Ammo UI")]
+    [SerializeField] private TextMeshProUGUI ammoText;
+
     private float timeSinceShot = 0f;
 
     private void Update() {
+        DisplayAmmo();
         timeSinceShot += Time.deltaTime;
         if (Input.GetMouseButtonDown(0) && IsFireRateReady()) {
             Shoot();
         }
+    }
+
+    private void DisplayAmmo() {
+        ammoText.text = "AMMO - " + ammoSlot.GetCurrentAmmo(ammoType).ToString();
     }
 
     private bool IsFireRateReady() {

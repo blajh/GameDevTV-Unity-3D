@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    [SerializeField] private AmmoSlot[] ammoSlots;
+    [SerializeField] private AmmoSlot[] ammoSlots;    
 
     [System.Serializable]
     private class AmmoSlot {
@@ -33,4 +34,5 @@ public class Ammo : MonoBehaviour
         }
         return null;
     }
+
 }
